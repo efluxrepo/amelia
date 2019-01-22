@@ -1,0 +1,1308 @@
+<template>
+  <div class="am-wrap">
+    <div id="am-finance" class="am-body">
+
+      <!-- Page Header -->
+      <page-header
+          :financeTotal="displayTotalCount"
+          :addNewCouponBtnDisplay="addNewCouponBtnDisplay"
+          @newCouponBtnClicked="showDialogNewCoupon()"
+      >
+      </page-header>
+
+      <!-- Spinner -->
+      <div class="am-spinner am-section" v-show="isPaymentsFiltering && isCouponsFiltering">
+        <img :src="$root.getUrl + 'public/img/spinner.svg'"/>
+      </div>
+
+      <!-- Finance -->
+      <div class="am-finances">
+
+        <el-tabs v-model="financeTabs" @tab-click="handleTabClick" v-show="!isPaymentsFiltering || !isCouponsFiltering">
+          <el-tab-pane :label="$root.labels.payments" name="payments">
+
+            <!-- Filter Finance -->
+            <div
+                class="am-finance-filter"
+                v-show="hasPayments"
+            >
+              <el-form class="" :action="exportPaymentsAction" method="POST">
+                <el-row :gutter="16">
+
+                  <!-- Date Filter -->
+                  <el-col :md="24" :lg="5" class="v-calendar-column">
+                    <el-form-item class="calc-width-mobile">
+                      <v-date-picker
+                          @input="filterPayments"
+                          v-model="paymentsParams.dates"
+                          :is-double-paned="true"
+                          mode='range'
+                          popover-visibility="focus"
+                          popover-direction="bottom"
+                          tint-color='#1A84EE'
+                          :show-day-popover=false
+                          :input-props='{class: "el-input__inner"}'
+                          :is-expanded=false
+                          :is-required=true
+                          input-class="el-input__inner"
+                          :placeholder="$root.labels.pick_a_date"
+                          :formats="vCalendarFormats"
+                      >
+                      </v-date-picker>
+                    </el-form-item>
+                  </el-col>
+
+                  <transition name="fade">
+                    <div class="am-filter-fields" v-show="filterPaymentsFields" v-popover:filterCustomersPop>
+                      <el-popover :disabled="!$root.isLite" ref="filterCustomersPop" v-bind="$root.popLiteProps"><PopLite/></el-popover>
+                      <!-- Customers Filter -->
+                      <el-col :md="6" :lg="5">
+                        <el-form-item>
+                          <el-select
+                              v-model="paymentsParams.customerId"
+                              filterable
+                              clearable
+                              :placeholder="$root.labels.customer"
+                              @change="filterPayments"
+                              :disabled="$root.isLite"
+                          >
+                            <el-option
+                                v-for="item in visibleCustomers"
+                                :key="item.id"
+                                :label="item.firstName + ' ' + item.lastName"
+                                :value="item.id"
+                            >
+                            </el-option>
+                          </el-select>
+                        </el-form-item>
+                      </el-col>
+
+                      <!-- Employees Filter -->
+                      <el-col :md="6" :lg="5">
+                        <el-form-item>
+                          <el-select
+                              v-model="paymentsParams.providerId"
+                              filterable
+                              clearable
+                              :placeholder="$root.labels.employee"
+                              @change="filterPayments"
+                              :disabled="$root.isLite"
+                          >
+                            <el-option
+                                v-for="item in visibleEmployees"
+                                :key="item.id"
+                                :label="item.firstName + ' ' + item.lastName"
+                                :value="item.id"
+                            >
+                            </el-option>
+                          </el-select>
+                        </el-form-item>
+                      </el-col>
+
+                      <!-- Services Filter -->
+                      <el-col :md="6" :lg="5">
+                        <el-form-item>
+                          <el-select
+                              v-model="paymentsParams.services"
+                              multiple
+                              filterable
+                              :placeholder="$root.labels.services"
+                              @change="filterPayments"
+                              collapse-tags
+                              :disabled="$root.isLite"
+                          >
+                            <div v-for="category in options.entities.categories"
+                                 :key="category.id">
+                              <div class="am-drop-parent"
+                                   @click="selectAllInCategoryFinance(category.id)"
+                              >
+                                <span>{{ category.name }}</span>
+                              </div>
+                              <el-option
+                                  v-for="service in category.serviceList"
+                                  :key="service.id"
+                                  :label="service.name"
+                                  :value="service.id"
+                                  class="am-drop-child"
+                              >
+                              </el-option>
+                            </div>
+                          </el-select>
+                        </el-form-item>
+                      </el-col>
+
+                      <!-- Status Filter -->
+                      <el-col :md="6" :lg="4">
+                        <el-form-item>
+                          <el-select
+                              v-model="paymentsParams.status"
+                              clearable
+                              :placeholder="$root.labels.status"
+                              class="calc-width"
+                              @change="filterPayments"
+                              :disabled="$root.isLite"
+                          >
+                            <el-option
+                                v-for="item in statuses"
+                                :key="item.value"
+                                :label="item.label"
+                                :value="item.value"
+                            >
+                              <span>{{ item.label }}</span>
+                            </el-option>
+                          </el-select>
+                        </el-form-item>
+                      </el-col>
+                    </div>
+                  </transition>
+
+                  <div class="">
+
+                    <!-- Toggle More Filters -->
+                    <el-button
+                        class="button-filter-toggle am-button-icon"
+                        title="Toggle Filters"
+                        @click="filterPaymentsFields = !filterPaymentsFields"
+                    >
+                      <img class="svg" alt="Toggle Filters" :src="$root.getUrl + 'public/img/filter.svg'"/>
+                    </el-button>
+
+                    <!-- Export Payments -->
+                    <el-popover :disabled="!$root.isLite" ref="filterExportPop" v-bind="$root.popLiteProps"><PopLite/></el-popover>
+                    <div v-popover:filterExportPop>
+                    <el-tooltip placement="top">
+                      <div slot="content" v-html="$root.labels.export_tooltip_payments"></div>
+                      <el-button
+                          class="button-export am-button-icon"
+                          @click="dialogPaymentsExport = true"
+                          :disabled="$root.isLite"
+                      >
+                        <img class="svg" alt="Export" :src="$root.getUrl+'public/img/export.svg'"/>
+                      </el-button>
+                    </el-tooltip>
+                    </div>
+
+                  </div>
+
+                </el-row>
+
+                <!-- Dialog Export Payments -->
+                <transition name="slide">
+                  <el-dialog
+                      :class="{'am-side-dialog am-dialog-export': true, 'am-lite-disabled': $root.isLite}"
+                      :visible.sync="dialogPaymentsExport"
+                      :show-close="false"
+                      v-if="dialogPaymentsExport"
+                  >
+                    <dialog-export
+                        :data="Object.assign(paymentsParams, exportParamsPayments)"
+                        :action="$root.getAjaxUrl + '/report/payments'"
+                        @updateAction="(action) => {this.exportPaymentsAction = action}"
+                        @closeDialogExport="dialogPaymentsExport = false"
+                    >
+                    </dialog-export>
+                  </el-dialog>
+                </transition>
+
+              </el-form>
+            </div>
+
+            <!-- Spinner -->
+            <div class="am-spinner am-section"
+                 v-show="isPaymentsFiltering && hasPayments"
+            >
+              <img :src="$root.getUrl + 'public/img/spinner.svg'"/>
+            </div>
+
+            <!-- Empty State -->
+            <div class="am-empty-state am-section"
+                 v-if="!hasPayments && !isPaymentsFiltering">
+              <img :src="$root.getUrl + 'public/img/emptystate.svg'">
+              <h2>{{ $root.labels.no_payments_yet }}</h2>
+              <p></p>
+            </div>
+
+            <!-- Table Header -->
+            <div
+                class="am-finance-list-head"
+                v-show="hasPayments && hasPaymentsFiltered && !isPaymentsFiltering"
+            >
+              <el-row>
+
+                <!-- Payment Date, Customer, Employee -->
+                <el-col :lg="14">
+                  <el-row :gutter="10" class="am-finance-flex-row-middle-align">
+
+                    <!-- Check All -->
+                    <el-col :lg="2" v-if="$root.settings.capabilities.canDelete === true">
+                      <p>
+                        <el-checkbox
+                            v-model="checkPaymentData.allChecked"
+                            @change="checkPaymentData = handleCheckAll(payments, checkPaymentData)">
+                        </el-checkbox>
+                      </p>
+                    </el-col>
+
+                    <!-- Payment Date -->
+                    <el-col :lg="6">
+                      <p>{{ $root.labels.payment_date }}:</p>
+                    </el-col>
+
+                    <!-- Customer -->
+                    <el-col :lg="8">
+                      <p>{{ $root.labels.customer }}:</p>
+                    </el-col>
+
+                    <!-- Employee -->
+                    <el-col :lg="8">
+                      <p>{{ $root.labels.employee }}:</p>
+                    </el-col>
+                  </el-row>
+
+                </el-col>
+
+                <!-- Service, Status -->
+                <el-col :lg="10">
+                  <el-row :gutter="10" class="am-finance-flex-row-middle-align">
+                    <el-col :lg="0" class="hide-on-mobile"></el-col>
+
+                    <!-- Service -->
+                    <el-col :lg="12">
+                      <p>{{ $root.labels.service }}:</p>
+                    </el-col>
+
+                    <!-- Status -->
+                    <el-col :lg="12">
+                      <p>{{ $root.labels.status }}:</p>
+                    </el-col>
+
+                  </el-row>
+                </el-col>
+
+              </el-row>
+            </div>
+
+            <!-- Collapsible Data  -->
+            <div
+                class="am-finance-list"
+                v-show="hasPayments && hasPaymentsFiltered && !isPaymentsFiltering"
+            >
+
+              <el-collapse>
+                <el-collapse-item
+                    v-for="(payment, index) in payments"
+                    v-if="appointmentProvider = getProviderById(payment.providerId)"
+                    :key="payment.id"
+                    :name="payment.id"
+                    class="am-finance"
+                >
+                  <template slot="title">
+                    <div class="am-finance-data">
+                      <el-row>
+
+                        <!-- Payment Date, Customer, Employee -->
+                        <el-col :lg="14">
+                          <el-row :gutter="10" class="am-finance-flex-row-middle-align">
+
+                            <!-- Checkbox -->
+                            <el-col :lg="2" :sm="1" v-if="$root.settings.capabilities.canDelete === true">
+                              <span @click.stop>
+                                  <el-checkbox
+                                      v-model="payment.checked"
+                                      @change="checkPaymentData = handleCheckSingle(payments, checkPaymentData)">
+                                  </el-checkbox>
+                              </span>
+                            </el-col>
+
+                            <!-- Payment Date -->
+                            <el-col :lg="6" :sm="6">
+                              <p class="am-col-title">{{ $root.labels.payment_date }}:</p>
+                              <h4>{{ getFrontedFormattedDate(payment.dateTime) }}</h4>
+                            </el-col>
+
+                            <!-- Customer -->
+                            <el-col :lg="8" :sm="8">
+                              <p class="am-col-title">{{ $root.labels.customer }}:</p>
+                              <h3>
+                                {{ ((user = getCustomerById(payment.customerId)) !== null ? user.firstName + ' ' +
+                                user.lastName : '') }}
+                              </h3>
+                              <span>{{ ((user = getCustomerById(payment.customerId)) !== null ? user.email : '') }}</span>
+                            </el-col>
+
+                            <!-- Employee -->
+                            <el-col :lg="8" :sm="8">
+                              <p class="am-col-title">{{ $root.labels.employee }}:</p>
+                              <div class="am-assigned">
+                                <img
+                                    :src="pictureLoad(appointmentProvider, true)"
+                                    @error="imageLoadError(appointmentProvider, true)"/>
+                                <h4>{{ ((user = appointmentProvider) !== null ? user.firstName + ' ' +
+                                  user.lastName : '') }}</h4>
+                              </div>
+                            </el-col>
+
+                          </el-row>
+                        </el-col>
+
+                        <el-col :lg="10">
+                          <el-row :gutter="10" class="am-finance-flex-row-middle-align">
+                            <el-col :lg="0" :sm="1" class="hide-on-mobile"></el-col>
+
+                            <!-- Service -->
+                            <el-col :lg="12" :sm="14">
+                              <p class="am-col-title">{{ $root.labels.service }}:</p>
+                              <h4>{{ ((service = getServiceById(payment.serviceId)) !== null ? service.name : '')
+                                }}</h4>
+                            </el-col>
+
+                            <!-- Status -->
+                            <el-col class="am-finance-payment-status" :lg="6" :sm="5">
+                              <p class="am-col-title">{{ $root.labels.status }}:</p>
+                              <i :class="{'el-icon-circle-check':payment.status === 'paid','el-icon-refresh':payment.status !== 'paid'}"></i>
+                              <h4>{{ getPaymentStatusNiceName(payment.status) }}</h4>
+                            </el-col>
+
+                            <!-- Details Button -->
+                            <el-col :lg="6" :sm="4" class="align-right">
+                              <div @click.stop>
+                                <el-button @click="showDialogEditPayment(payment.id, payment.appointmentId)">
+                                  {{ $root.labels.details }}
+                                </el-button>
+                              </div>
+                            </el-col>
+
+                          </el-row>
+                        </el-col>
+                      </el-row>
+                    </div>
+                  </template>
+
+                  <div class="am-finance-details">
+                    <el-row>
+
+                      <!-- Appointment Date -->
+                      <el-col :lg="14">
+                        <el-row :gutter="10" class="am-finance-flex-row-top-align">
+                          <el-col :lg="2" :sm="1" class="hide-on-mobile"></el-col>
+                          <el-col :lg="22" :sm="23">
+                            <p class="am-data">{{ $root.labels.appointment_date }}:</p>
+                            <p class="am-value">{{ getFrontedFormattedDateTime(payment.bookingStart) }}</p>
+                          </el-col>
+                        </el-row>
+                      </el-col>
+
+                      <!-- Type, Amount -->
+                      <el-col :lg="10">
+                        <el-row :gutter="10" class="am-finance-flex-row-top-align">
+                          <el-col :lg="0" :sm="1" class="hide-on-mobile"></el-col>
+
+                          <!-- Type -->
+                          <el-col class="am-finance-payment-gateway" :lg="12" :sm="14">
+                            <p class="am-data">{{ $root.labels.method }}:</p>
+                            <img :src="$root.getUrl + 'public/img/payments/' + payment.gateway + '.svg'">
+                            <p class="am-value">{{ getPaymentGatewayNiceName(payment) }}</p>
+                          </el-col>
+
+                          <!-- Amount -->
+                          <el-col :lg="12" :sm="10">
+                            <p class="am-data">{{ $root.labels.amount }}:</p>
+                            <p class="am-value">{{ getFormattedPrice(payment.amount) }}</p>
+                          </el-col>
+
+                        </el-row>
+                      </el-col>
+
+                    </el-row>
+                  </div>
+                </el-collapse-item>
+
+              </el-collapse>
+            </div>
+
+            <!-- No Results -->
+            <div class="am-empty-state am-section"
+                 v-show="hasPayments && !hasPaymentsFiltered && !isPaymentsFiltering">
+              <img :src="$root.getUrl + 'public/img/emptystate.svg'">
+              <h2>{{ $root.labels.no_results }}</h2>
+            </div>
+
+            <!-- Pagination -->
+            <pagination-block
+                :params="paymentsParams"
+                :count="paymentsFilteredCount"
+                :label="$root.labels.payments_lower"
+                :visible="hasPayments && hasPaymentsFiltered && !isPaymentsFiltering"
+                @change="filterPayments"
+            >
+            </pagination-block>
+          </el-tab-pane>
+
+          <el-tab-pane :label="$root.labels.coupons" name="coupons" v-if="$root.settings.payments.coupons || $root.isLite">
+            <BlockLite/>
+
+            <!-- Filter Coupons -->
+            <div class="am-finance-filter"
+                 v-show="hasCoupons">
+              <el-form class="" :action="exportCouponsAction" method="POST">
+                <el-row :gutter="16">
+                  <el-col :md="24" :lg="12">
+                    <div class="am-search">
+                      <el-form-item>
+                        <el-input
+                            class="calc-width-mobile"
+                            :placeholder="searchPlaceholder"
+                            v-model="couponsParams.search"
+                        >
+                        </el-input>
+                      </el-form-item>
+                    </div>
+                  </el-col>
+
+                  <transition name="fade">
+                    <div class="am-filter-fields" v-show="filterCouponsFields">
+
+                      <!-- Services Filter -->
+                      <el-col :md="24" :lg="12">
+                        <el-form-item>
+                          <el-select
+                              v-model="couponsParams.services"
+                              multiple
+                              filterable
+                              class="calc-width"
+                              :placeholder="$root.labels.services"
+                              @change="filterCoupons"
+                              collapse-tags
+                          >
+                            <div v-for="category in options.entities.categories"
+                                 :key="category.id">
+                              <div
+                                  class="am-drop-parent"
+                                  @click="selectAllInCategoryCoupons(category.id)"
+                              >
+                                <span>{{ category.name }}</span>
+                              </div>
+                              <el-option
+                                  v-for="service in category.serviceList"
+                                  :key="service.id"
+                                  :label="service.name"
+                                  :value="service.id"
+                                  class="am-drop-child"
+                              >
+                              </el-option>
+                            </div>
+                          </el-select>
+                        </el-form-item>
+                      </el-col>
+
+                    </div>
+                  </transition>
+
+                  <!-- Toggle More Filters -->
+                  <div class="">
+                    <el-button class="button-filter-toggle am-button-icon" title="Toggle Filters"
+                               @click="filterCouponsFields = !filterCouponsFields">
+                      <img class="svg" alt="Toggle Filters"
+                           :src="$root.getUrl+'public/img/filter.svg'"/>
+                    </el-button>
+
+                    <!-- Export Coupons -->
+                    <el-tooltip placement="top">
+                      <div slot="content" v-html="$root.labels.export_tooltip_coupons"></div>
+                      <el-button
+                          class="button-export am-button-icon"
+                          @click="dialogCouponsExport = true"
+                      >
+                        <img class="svg" alt="Export" :src="$root.getUrl+'public/img/export.svg'"/>
+                      </el-button>
+                    </el-tooltip>
+                  </div>
+                </el-row>
+
+                <!-- Dialog Export Coupons -->
+                <transition name="slide">
+                  <el-dialog
+                      class="am-side-dialog am-dialog-export"
+                      :visible.sync="dialogCouponsExport"
+                      :show-close="false"
+                      v-if="dialogCouponsExport"
+                  >
+                    <dialog-export
+                        :data="Object.assign(couponsParams, exportParamsCoupons)"
+                        :action="$root.getAjaxUrl + '/report/coupons'"
+                        @updateAction="(action) => {this.exportCouponsAction = action}"
+                        @closeDialogExport="dialogCouponsExport = false"
+                    >
+                    </dialog-export>
+                  </el-dialog>
+                </transition>
+
+              </el-form>
+            </div>
+
+            <!-- Spinner -->
+            <div class="am-spinner am-section"
+                 v-show="isCouponsFiltering && hasCoupons"
+            >
+              <img :src="$root.getUrl + 'public/img/spinner.svg'"/>
+            </div>
+
+            <!-- Empty State -->
+            <div class="am-empty-state am-section"
+                 v-if="!hasCoupons && !isCouponsFiltering">
+              <img :src="$root.getUrl + 'public/img/emptystate.svg'">
+              <h2>{{ $root.labels.no_coupons_yet }}</h2>
+              <p></p>
+            </div>
+
+            <!-- Coupons Table Header -->
+            <div
+                class="am-finance-list-head"
+                v-show="hasCoupons && hasCouponsFiltered && !isCouponsFiltering"
+            >
+              <el-row>
+
+                <!-- Checkbox, Code, Discount, Deduction -->
+                <el-col :lg="10">
+                  <el-row :gutter="10" class="am-finance-flex-row-middle-align">
+
+                    <!-- Checkbox -->
+                    <el-col :lg="2" v-if="$root.settings.capabilities.canDelete === true">
+                      <p>
+                        <el-checkbox
+                            v-model="checkCouponData.allChecked"
+                            @change="checkCouponData = handleCheckAll(coupons, checkCouponData)">
+                        </el-checkbox>
+                      </p>
+                    </el-col>
+
+                    <!-- Code -->
+                    <el-col :lg="8">
+                      <p>{{ $root.labels.code }}:</p>
+                    </el-col>
+
+                    <!-- Discount -->
+                    <el-col :lg="7">
+                      <p>{{ $root.labels.discount }}:</p>
+                    </el-col>
+
+                    <!-- Deduction -->
+                    <el-col :lg="7">
+                      <p>{{ $root.labels.deduction }}:</p>
+                    </el-col>
+
+                  </el-row>
+                </el-col>
+
+                <!-- Service, Usage, Number of Times Used -->
+                <el-col :lg="14">
+                  <el-row :gutter="10" class="am-finance-flex-row-middle-align">
+
+                    <el-col :lg="0" class="hide-on-mobile"></el-col>
+
+                    <!-- Service -->
+                    <el-col :lg="10">
+                      <p>{{ $root.labels.service }}:</p>
+                    </el-col>
+
+                    <!-- Usage Limit -->
+                    <el-col :lg="5">
+                      <p>{{ $root.labels.usage_limit }}:</p>
+                    </el-col>
+
+                    <!-- Number of Times Used -->
+                    <el-col :lg="5">
+                      <p>{{ $root.labels.times_used }}:</p>
+                    </el-col>
+
+                  </el-row>
+                </el-col>
+
+              </el-row>
+            </div>
+
+            <div
+                class="am-finance-list"
+                v-show="hasCoupons && hasCouponsFiltered && !isCouponsFiltering"
+            >
+              <div v-for="coupon in coupons"
+                   :class="{'am-coupon-row am-hidden-entity' : coupon.status === 'hidden', 'am-coupon-row' : coupon.status === 'visible'}"
+              >
+                <el-row>
+
+                  <!-- Checkbox, Code, Discount, Deduction -->
+                  <el-col :lg="10">
+                    <el-row :gutter="10" class="am-finance-flex-row-middle-align">
+
+                      <!-- Checkbox -->
+                      <el-col :lg="2" :sm="1" v-if="$root.settings.capabilities.canDelete === true">
+                        <span @click.stop>
+                          <el-checkbox
+                              v-model="coupon.checked"
+                              @change="checkCouponData = handleCheckSingle(coupons, checkCouponData)"
+                          >
+                          </el-checkbox>
+                        </span>
+                      </el-col>
+
+                      <!-- Code -->
+                      <el-col :lg="8" :sm="9">
+                        <p class="am-col-title">{{ $root.labels.code }}:</p>
+                        <h4>{{ coupon.code }}</h4>
+                      </el-col>
+
+                      <!-- Discount -->
+                      <el-col :lg="7" :sm="5">
+                        <p class="am-col-title">{{ $root.labels.discount }}:</p>
+                        <h4>{{ coupon.discount }}</h4>
+                      </el-col>
+
+                      <!-- Deduction -->
+                      <el-col :lg="7" :sm="5">
+                        <p class="am-col-title">{{ $root.labels.deduction }}:</p>
+                        <h4>{{ getFormattedPrice(coupon.deduction) }}</h4>
+                      </el-col>
+
+                    </el-row>
+                  </el-col>
+
+                  <!-- Service, Usage, Number of Times Used -->
+                  <el-col :lg="14">
+                    <el-row :gutter="10" class="am-finance-flex-row-middle-align">
+
+                      <el-col :lg="0" :sm="1" class="hide-on-mobile"></el-col>
+
+                      <!-- Service -->
+                      <el-col :lg="10" :sm="9">
+                        <p class="am-col-title">{{ $root.labels.service }}:</p>
+                        <h4>
+                          {{coupon.serviceList.length > 0 ? (coupon.serviceList[0].name + (coupon.serviceList.length > 1
+                          ? $root.labels.coupons_multiple_services_text : '')) : ''}}
+                        </h4>
+                      </el-col>
+
+                      <!-- Usage Limit -->
+                      <el-col :lg="5" :sm="5">
+                        <p class="am-col-title">{{ $root.labels.usage_limit }}:</p>
+                        <h4>{{ coupon.limit }}</h4>
+                      </el-col>
+
+                      <!-- Number of Times Used -->
+                      <el-col :lg="5" :sm="5">
+                        <p class="am-col-title">{{ $root.labels.times_used }}:</p>
+                        <h4>{{ coupon.used }}</h4>
+                      </el-col>
+
+                      <!-- Edit Button -->
+                      <el-col :lg="4" :sm="4" class="align-right">
+                        <div @click.stop>
+                          <el-button @click="showDialogEditCoupon(coupon.id)">{{ $root.labels.edit }}</el-button>
+                        </div>
+                      </el-col>
+
+                    </el-row>
+                  </el-col>
+                </el-row>
+              </div>
+            </div>
+
+            <!-- No Results -->
+            <div class="am-empty-state am-section"
+                 v-show="hasCoupons && !hasCouponsFiltered && !isCouponsFiltering">
+              <img :src="$root.getUrl + 'public/img/emptystate.svg'">
+              <h2>{{ $root.labels.no_results }}</h2>
+            </div>
+
+            <!-- Pagination -->
+            <pagination-block
+                :params="couponsParams"
+                :count="couponsFilteredCount"
+                :label="$root.labels.coupons_lower"
+                :visible="hasCoupons && hasCouponsFiltered && !isCouponsFiltering"
+                @change="filterCoupons"
+            >
+            </pagination-block>
+          </el-tab-pane>
+
+        </el-tabs>
+
+      </div>
+
+      <!-- Selected Popover Delete -->
+      <group-delete
+          name="payments"
+          :entities="payments"
+          :checkGroupData="checkPaymentData"
+          :confirmDeleteMessage="$root.labels.confirm_delete_payment"
+          :successMessage="{single: $root.labels.payment_deleted, multiple: $root.labels.payments_deleted}"
+          :errorMessage="{single: $root.labels.payment_not_deleted, multiple: $root.labels.payments_not_deleted}"
+          @groupDeleteCallback="paymentGroupDeleteCallback"
+      >
+      </group-delete>
+
+      <!-- Selected Popover Delete -->
+      <group-delete
+          name="coupons"
+          :entities="coupons"
+          :checkGroupData="checkCouponData"
+          :confirmDeleteMessage="$root.labels.confirm_delete_coupon"
+          :successMessage="{single: $root.labels.coupon_deleted, multiple: $root.labels.coupons_deleted}"
+          :errorMessage="{single: $root.labels.coupon_not_deleted, multiple: $root.labels.coupons_not_deleted}"
+          @groupDeleteCallback="couponGroupDeleteCallback"
+      >
+      </group-delete>
+
+      <!-- Dialog Coupon -->
+      <transition name="slide" v-if="$root.settings.payments.coupons">
+        <el-dialog
+            class="am-side-dialog am-dialog-coupon"
+            :visible.sync="dialogCoupon"
+            :show-close="false"
+            v-if="dialogCoupon"
+        >
+          <dialog-coupon
+              :coupon="coupon"
+              :services="options.entities.services"
+              :couponFetched="couponFetched"
+              @closeDialog="closeDialogCoupon()"
+              @saveCallback="fetchData"
+              @duplicateCallback="duplicateCouponCallback"
+          >
+          </dialog-coupon>
+        </el-dialog>
+      </transition>
+
+      <!-- Dialog Payment -->
+      <transition name="slide">
+        <el-dialog
+            class="am-side-dialog am-dialog-coupon"
+            :visible.sync="dialogPayment"
+            :show-close="false"
+            v-if="dialogPayment"
+        >
+          <dialog-payment
+              :modalData="selectedPaymentModalData"
+              :appointmentFetched="appointmentFetched"
+              @updatePaymentCallback="updatePaymentCallback"
+              @closeDialogPayment="closeDialogPayment()"
+          >
+          </dialog-payment>
+        </el-dialog>
+      </transition>
+
+      <DialogLite/>
+
+      <!-- Help Button -->
+      <el-col :md="6" class="">
+        <a class="am-help-button" href="https://wpamelia.com/admin-finances/" target="_blank">
+          <i class="el-icon-question"></i> {{ $root.labels.need_help }}?
+        </a>
+      </el-col>
+
+    </div>
+  </div>
+</template>
+
+<script>
+  import PageHeader from '../parts/PageHeader.vue'
+  import Form from 'form-object'
+  import liteMixin from '../../../js/common/mixins/liteMixin'
+  import imageMixin from '../../../js/common/mixins/imageMixin'
+  import dateMixin from '../../../js/common/mixins/dateMixin'
+  import checkMixin from '../../../js/backend/mixins/checkMixin'
+  import DialogCoupon from './DialogFinanceCoupon.vue'
+  import DialogPayment from './DialogFinancePayment.vue'
+  import DialogExport from '../parts/DialogExport.vue'
+  import notifyMixin from '../../../js/backend/mixins/notifyMixin'
+  import entitiesMixin from '../../../js/common/mixins/entitiesMixin'
+  import paymentMixin from '../../../js/backend/mixins/paymentMixin'
+  import GroupDelete from '../parts/GroupDelete.vue'
+  import priceMixin from '../../../js/common/mixins/priceMixin'
+  import PaginationBlock from '../parts/PaginationBlock.vue'
+  import helperMixin from '../../../js/backend/mixins/helperMixin'
+
+  export default {
+
+    mixins: [liteMixin, paymentMixin, entitiesMixin, imageMixin, dateMixin, checkMixin, notifyMixin, priceMixin, helperMixin],
+
+    data () {
+      return {
+        appointmentFetched: false,
+        paymentsFilteredCount: 0,
+        paymentsTotalCount: 0,
+        couponFetched: false,
+        couponsFilteredCount: 0,
+        couponsTotalCount: 0,
+
+        displayTotalCount: 0,
+
+        paymentsFiltering: false,
+        couponsFiltering: false,
+
+        fetchedFilteredPayments: false,
+        fetchedFilteredCoupons: false,
+
+        addNewCouponBtnDisplay: false,
+        dialogCoupon: false,
+        dialogPayment: false,
+
+        coupon: null,
+
+        form: new Form(),
+
+        checkPaymentData: {
+          toaster: false,
+          allChecked: false
+        },
+
+        checkCouponData: {
+          toaster: false,
+          allChecked: false
+        },
+
+        options: {
+          entities: {
+            services: [],
+            employees: [],
+            customers: []
+          },
+          fetched: false
+        },
+
+        dialogPaymentsExport: false,
+        dialogCouponsExport: false,
+
+        paymentsParams: {
+          page: 1,
+          dates: this.getDatePickerInitRange(),
+          status: '',
+          services: [],
+          providerId: '',
+          customerId: ''
+        },
+        exportParamsPayments: {
+          fields: [
+            {label: this.$root.labels.service, value: 'service', checked: true},
+            {label: this.$root.labels.booking_start, value: 'bookingStart', checked: true},
+            {label: this.$root.labels.customer, value: 'customer', checked: true},
+            {label: this.$root.labels.customer_email, value: 'customerEmail', checked: true},
+            {label: this.$root.labels.employee, value: 'employee', checked: true},
+            {label: this.$root.labels.employee_email, value: 'employeeEmail', checked: true},
+            {label: this.$root.labels.amount, value: 'amount', checked: true},
+            {label: this.$root.labels.method, value: 'type', checked: true},
+            {label: this.$root.labels.status, value: 'status', checked: true},
+            {label: this.$root.labels.payment_date, value: 'paymentDate', checked: true}
+          ]
+        },
+        exportPaymentsAction: '',
+
+        couponsParams: {
+          page: 1,
+          status: '',
+          services: [],
+          search: ''
+        },
+        exportParamsCoupons: {
+          fields: [
+            {label: this.$root.labels.code, value: 'code', checked: true},
+            {label: this.$root.labels.discount, value: 'discount', checked: true},
+            {label: this.$root.labels.deduction, value: 'deduction', checked: true},
+            {label: this.$root.labels.services, value: 'services', checked: true},
+            {label: this.$root.labels.limit, value: 'limit', checked: true},
+            {label: this.$root.labels.used, value: 'used', checked: true}
+          ]
+        },
+        exportCouponsAction: '',
+
+        statuses: [
+          {
+            value: 'paid',
+            label: this.$root.labels.paid
+
+          }, {
+            value: 'pending',
+            label: this.$root.labels.pending
+
+          }
+        ],
+
+        selectedPaymentModalData: {
+          paymentId: null,
+          appointment: null,
+          service: null,
+          provider: null,
+          customer: null
+        },
+
+        // Filter
+        filterPaymentsFields: true,
+        filterCouponsFields: true,
+        searchPlaceholder: this.$root.labels.finance_coupons_search_placeholder,
+
+        // Finance
+        financeTabs: 'payments',
+        payments: [],
+        coupons: [],
+
+        timer: null
+      }
+    },
+
+    created () {
+      // Set filter params based on URL GET fields
+      let urlParams = this.getUrlQueryParams(window.location.href)
+
+      if (!('dateFrom' in urlParams) || !('dateTo' in urlParams)) {
+        this.paymentsParams.dates = this.getDatePickerInitRange()
+      } else {
+        this.paymentsParams.dates = {
+          start: this.$moment(urlParams['dateFrom']).toDate(),
+          end: this.$moment(urlParams['dateTo']).toDate()
+        }
+      }
+
+      if (urlParams['status']) { this.paymentsParams.status = urlParams['status'] }
+
+      this.fetchData()
+      this.handleResize()
+      this.getFinanceOptions()
+    },
+
+    mounted () {
+      this.inlineSVG()
+    },
+
+    methods: {
+
+      fetchData () {
+        this.getPayments()
+        this.getCoupons()
+      },
+
+      getPayments () {
+        this.paymentsFiltering = true
+        this.fetchedFilteredPayments = false
+
+        let params = JSON.parse(JSON.stringify(this.paymentsParams))
+        let dates = []
+
+        if (params.dates) {
+          if (params.dates.start) {
+            dates.push(this.$moment(params.dates.start).format('YYYY-MM-DD'))
+          }
+
+          if (params.dates.end) {
+            dates.push(this.$moment(params.dates.end).format('YYYY-MM-DD'))
+          }
+
+          params.dates = dates
+        }
+
+        Object.keys(params).forEach((key) => (!params[key] && params[key] !== 0) && delete params[key])
+
+        this.$http.get(`${this.$root.getAjaxUrl}/payments`, {
+          params: params
+        })
+          .then(response => {
+            response.data.data.payments.forEach(function (payItem) {
+              payItem.checked = false
+            })
+
+            this.payments = response.data.data.payments
+            this.paymentsFilteredCount = response.data.data.filteredCount
+            this.paymentsTotalCount = response.data.data.totalCount
+
+            if (this.financeTabs === 'coupons') {
+              this.displayTotalCount = this.couponsTotalCount
+            } else {
+              this.displayTotalCount = this.paymentsTotalCount
+            }
+
+            this.paymentsFiltering = false
+            this.fetchedFilteredPayments = true
+          })
+          .catch(e => {
+            console.log(e.message)
+
+            this.paymentsFiltering = false
+            this.fetchedFilteredPayments = true
+          })
+      },
+
+      getFinanceOptions () {
+        this.options.fetched = false
+
+        this.$http.get(`${this.$root.getAjaxUrl}/entities`, {
+          params: {
+            types: ['categories', 'employees', 'customers']
+          }
+        })
+          .then(response => {
+            this.filterResponseData(response)
+
+            this.options.entities = response.data.data
+
+            this.options.entities.services = this.getServicesFromCategories()
+
+            this.options.fetched = true
+          })
+          .catch(e => {
+            console.log(e.message)
+
+            this.options.fetched = true
+          })
+      },
+
+      getCoupons: !AMELIA_LITE_VERSION ? function () {
+        this.couponsFiltering = true
+        this.fetchedFilteredCoupons = false
+
+        let params = JSON.parse(JSON.stringify(this.couponsParams))
+
+        Object.keys(params).forEach((key) => (!params[key] && params[key] !== 0) && delete params[key])
+
+        this.$http.get(`${this.$root.getAjaxUrl}/coupons`, {
+          params: params
+        })
+          .then(response => {
+            response.data.data.coupons.forEach(function (coupItem) {
+              coupItem.checked = false
+            })
+
+            this.coupons = response.data.data.coupons
+            this.couponsFilteredCount = response.data.data.filteredCount
+            this.couponsTotalCount = response.data.data.totalCount
+
+            if (this.financeTabs === 'coupons') {
+              this.displayTotalCount = this.couponsTotalCount
+            } else {
+              this.displayTotalCount = this.paymentsTotalCount
+            }
+
+            this.couponsFiltering = false
+            this.fetchedFilteredCoupons = true
+          })
+          .catch(e => {
+            console.log(e.message)
+
+            this.couponsFiltering = false
+            this.fetchedFilteredCoupons = true
+          })
+      } : function () {},
+
+      getAppointment (paymentId, appointmentId) {
+        this.$http.get(`${this.$root.getAjaxUrl}/appointments/` + appointmentId)
+          .then(response => {
+            this.selectedPaymentModalData = this.getPaymentData(paymentId, response.data.data.appointment)
+            this.appointmentFetched = true
+          })
+          .catch(e => {
+            console.log(e.message)
+          })
+      },
+
+      getCoupon: !AMELIA_LITE_VERSION ? function (couponId) {
+        this.$http.get(`${this.$root.getAjaxUrl}/coupons/` + couponId)
+          .then(response => {
+            response.data.data.coupon.serviceList.forEach(function (coupItem) {
+              coupItem.checked = true
+            })
+
+            this.coupon = response.data.data.coupon
+            this.couponFetched = true
+          })
+          .catch(e => {
+            console.log(e.message)
+          })
+      } : function () {},
+
+      paymentGroupDeleteCallback () {
+        this.checkPaymentData.allChecked = false
+        this.checkPaymentData.toaster = false
+        this.fetchData()
+      },
+
+      couponGroupDeleteCallback: !AMELIA_LITE_VERSION ? function () {
+        this.checkCouponData.allChecked = false
+        this.checkCouponData.toaster = false
+        this.fetchData()
+      } : function () {},
+
+      filterPayments () {
+        this.getPayments()
+      },
+
+      filterCoupons: !AMELIA_LITE_VERSION ? function () {
+        this.getCoupons()
+      } : function () {},
+
+      updatePaymentCallback () {
+        this.dialogPayment = false
+        this.fetchData()
+      },
+
+      duplicateCouponCallback: !AMELIA_LITE_VERSION ? function (coupon) {
+        this.coupon = coupon
+        this.coupon.id = 0
+
+        setTimeout(() => {
+          this.dialogCoupon = true
+        }, 300)
+      } : function () {},
+
+      handleResize () {
+        this.filterPaymentsFields = window.innerWidth >= 992
+        this.filterCouponsFields = window.innerWidth >= 992
+      },
+
+      showDialogNewCoupon: !AMELIA_LITE_VERSION ? function () {
+        this.coupon = this.getInitCouponObject()
+        this.dialogCoupon = true
+      } : function () {},
+
+      showDialogEditCoupon: !AMELIA_LITE_VERSION ? function (couponId) {
+        this.dialogCoupon = true
+        this.getCoupon(couponId)
+      } : function () {},
+
+      showDialogEditPayment (paymentId, appointmentId) {
+        this.dialogPayment = true
+        this.getAppointment(paymentId, appointmentId)
+      },
+
+      handleTabClick (tab) {
+        if (tab.name === 'coupons') {
+          this.addNewCouponBtnDisplay = true
+          this.displayTotalCount = this.couponsTotalCount
+        } else {
+          this.addNewCouponBtnDisplay = false
+          this.displayTotalCount = this.paymentsTotalCount
+        }
+      },
+
+      selectAllInCategoryFinance (id) {
+        let services = this.getCategoryServices(id)
+        let servicesIds = services.map(service => service.id)
+
+        // Deselect all services if they are already selected
+        if (_.isEqual(_.intersection(servicesIds, this.paymentsParams.services), servicesIds)) {
+          this.paymentsParams.services = _.difference(this.paymentsParams.services, servicesIds)
+        } else {
+          this.paymentsParams.services = _.uniq(this.paymentsParams.services.concat(servicesIds))
+        }
+
+        this.filterPayments()
+      },
+
+      selectAllInCategoryCoupons: !AMELIA_LITE_VERSION ? function (id) {
+        let services = this.getCategoryServices(id)
+        let servicesIds = services.map(service => service.id)
+
+        // Deselect all services if they are already selected
+        if (_.isEqual(_.intersection(servicesIds, this.couponsParams.services), servicesIds)) {
+          this.couponsParams.services = _.difference(this.couponsParams.services, servicesIds)
+        } else {
+          this.couponsParams.services = _.uniq(this.couponsParams.services.concat(servicesIds))
+        }
+
+        this.filterCoupons()
+      } : function () {},
+
+      getInitCouponObject: !AMELIA_LITE_VERSION ? function () {
+        return {
+          id: 0,
+          code: '',
+          discount: 0,
+          deduction: 0,
+          limit: 0,
+          status: 'visible',
+          serviceList: []
+        }
+      } : function () {},
+
+      getPaymentStatusNiceName (status) {
+        return status === 'paid' ? this.$root.labels.paid : this.$root.labels.pending
+      },
+
+      getPaymentGatewayNiceName (payment) {
+        if (payment.gateway === 'onSite') {
+          return this.$root.labels.on_site
+        }
+
+        if (payment.gateway === 'wc') {
+          return payment.gatewayTitle
+        }
+
+        return payment.gateway.charAt(0).toUpperCase() + payment.gateway.slice(1)
+      },
+
+      closeDialogPayment () {
+        this.dialogPayment = false
+        this.appointmentFetched = false
+      },
+
+      closeDialogCoupon: !AMELIA_LITE_VERSION ? function () {
+        this.coupon = null
+        this.dialogCoupon = false
+        this.couponFetched = false
+      } : function () {}
+    },
+
+    watch: {
+      'couponsParams.search' () {
+        clearTimeout(this.timer)
+        this.timer = setTimeout(this.filterCoupons, 500)
+      },
+
+      'dialogPayment' () {
+        if (this.dialogPayment === false) {
+          this.appointmentFetched = false
+        }
+      },
+
+      'dialogCoupon' () {
+        if (this.dialogCoupon === false) {
+          this.couponFetched = false
+          this.coupon = null
+        }
+      }
+    },
+
+    computed: {
+      hasPayments () {
+        return this.paymentsTotalCount !== 0
+      },
+
+      hasPaymentsFiltered () {
+        return this.payments.length !== 0
+      },
+
+      isPaymentsFiltering () {
+        return this.paymentsFiltering
+      },
+
+      hasCoupons () {
+        return this.couponsTotalCount !== 0
+      },
+
+      hasCouponsFiltered () {
+        return this.coupons.length !== 0
+      },
+
+      isCouponsFiltering () {
+        return this.couponsFiltering
+      }
+    },
+
+    components: {
+      PageHeader,
+      DialogCoupon,
+      DialogPayment,
+      DialogExport,
+      GroupDelete,
+      PaginationBlock
+    }
+
+  }
+</script>
+

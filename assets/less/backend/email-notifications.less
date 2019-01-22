@@ -1,0 +1,114 @@
+@import "../common/_variables";
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.snow.css';
+@import '~quill/dist/quill.bubble.css';
+
+#am-email-notifications {
+  .am-gray-section {
+    background-color: @color-highlight;
+    height: 100%;
+  }
+  .am-email-form-settings {
+    h2 {
+      margin-bottom: @margin-medium;
+    }
+    .am-divider {
+      height: 2px;
+    }
+    p.am-blue-link {
+      color: @color-blue;
+      text-align: right;
+      cursor: pointer;
+      margin: 0;
+      &:hover {
+        color: darken(@color-blue, 10%);
+      }
+    }
+    .el-textarea__inner {
+      margin-bottom: @margin-medium;
+    }
+    .el-input, .el-select {
+      width: 100%;
+    }
+    .quill-editor {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: @margin-big;
+      .ql-toolbar.ql-snow {
+        border-radius: 4px 4px 0 0;
+      }
+      .ql-container {
+        border-radius: 0 0 4px 4px;
+        .ql-tooltip {
+          margin-left: 115px;
+        }
+        .ql-editor p {
+          font-size: @small-fs;
+        }
+      }
+      .ql-toolbar.ql-snow, .ql-container {
+        border-color: @color-divider-gray;
+      }
+    }
+  }
+
+  .am-email-notification-buttons {
+    .am-button-checkbox {
+      position: relative;
+      margin: @margin-big 0 0;
+      .el-checkbox {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        z-index: 2;
+      }
+      .am-cron-icon {
+        cursor: pointer;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        z-index: 2;
+        height: 16px;
+        width: 16px;
+        display: block;
+        opacity: 0.2;
+        svg, img {
+          path {
+          }
+        }
+        &.active {
+          opacity: 0.6;
+        }
+      }
+      .el-button {
+        width: 100%;
+        color: @color-text-prime;
+        padding: @padding-medium;
+        &.am-active {
+          color: @color-white;
+          background-color: @color-blue;
+        }
+      }
+    }
+  }
+  .el-form-item {
+    margin-bottom: 0;
+  }
+  .el-dialog {
+    .el-select {
+      width: 100%;
+    }
+  }
+  .am-pop-modal {
+    .el-dialog__body {
+      padding: 15px 20px;
+      .el-alert {
+        color: @color-orange;
+        margin-bottom: 10px;
+        .el-alert__title {
+          color: @color-orange;
+        }
+      }
+    }
+  }
+}

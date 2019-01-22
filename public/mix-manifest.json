@@ -1,0 +1,20 @@
+{
+    "/js/chunks/amelia-booking-dashboard.js": "/js/chunks/amelia-booking-dashboard.js",
+    "/js/chunks/amelia-booking-calendar.js": "/js/chunks/amelia-booking-calendar.js",
+    "/js/chunks/amelia-booking-appointments.js": "/js/chunks/amelia-booking-appointments.js",
+    "/js/chunks/amelia-booking-employees.js": "/js/chunks/amelia-booking-employees.js",
+    "/js/chunks/amelia-booking-finance.js": "/js/chunks/amelia-booking-finance.js",
+    "/js/chunks/amelia-booking-customers.js": "/js/chunks/amelia-booking-customers.js",
+    "/js/chunks/amelia-booking-locations.js": "/js/chunks/amelia-booking-locations.js",
+    "/js/chunks/amelia-booking-settings.js": "/js/chunks/amelia-booking-settings.js",
+    "/js/chunks/amelia-booking-services.js": "/js/chunks/amelia-booking-services.js",
+    "/js/chunks/amelia-booking-emailnotifications.js": "/js/chunks/amelia-booking-emailnotifications.js",
+    "/js/chunks/amelia-booking-customize.js": "/js/chunks/amelia-booking-customize.js",
+    "/js/chunks/amelia-booking-booking.js": "/js/chunks/amelia-booking-booking.js",
+    "/js/backend/amelia-booking.js": "/js/backend/amelia-booking.js",
+    "/css/backend/amelia-booking.css": "/css/backend/amelia-booking.css",
+    "/css/frontend/vendor.css": "/css/frontend/vendor.css",
+    "/../../../uploads/amelia/css/amelia-booking.css": "/../../../uploads/amelia/css/amelia-booking.css",
+    "/app.js": "/app.js",
+    "/js/frontend/amelia-booking.js": "/js/frontend/amelia-booking.js"
+}

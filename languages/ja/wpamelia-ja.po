@@ -1,0 +1,2784 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Amelia\n"
+"POT-Creation-Date: 2018-06-24 16:33+0900\n"
+"PO-Revision-Date: 2018-10-15 14:09+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ../../src/Infrastructure/WP/Translations\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: ameliabooking.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _;_e;gettext;gettext_noop;__\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php:71
+#: src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php:212
+msgid "Appointment Approved"
+msgstr "承認済みのアポイントメント"
+
+#: src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php:86
+#: src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php:227
+msgid "Appointment Pending"
+msgstr "保留中のアポイントメント"
+
+#: src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php:101
+#: src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php:241
+msgid "Appointment Rejected"
+msgstr "拒否済みのアポイントメント"
+
+#: src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php:116
+#: src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php:256
+msgid "Appointment Canceled"
+msgstr "キャンセル済みのアポイントメント"
+
+#: src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php:131
+#: src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php:270
+msgid "Appointment Rescheduled"
+msgstr "再スケジュールのアポイントメント"
+
+#: src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php:158
+msgid "Appointment Next Day Reminder"
+msgstr "翌日リマインダーのアポイントメント"
+
+#: src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php:173
+msgid "Appointment Follow Up"
+msgstr "フォローアップのアポイントメント"
+
+#: src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php:187
+msgid "Birthday Greeting"
+msgstr "誕生日おめでとう"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:20
+msgid "All Locations"
+msgstr "すべての場所"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:21
+msgid "All Services"
+msgstr "すべてのサービス  "
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:22
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:49
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:23
+msgid "Close"
+msgstr "終了"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:24
+msgid "Select Delimiter"
+msgstr "区切り文字を選択"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:25
+msgid "Comma (,)"
+msgstr "コンマ (,)"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:26
+msgid "Semicolon (;)"
+msgstr "セミコロン (;)"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:27
+msgid "Customer"
+msgstr "お客様"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:28
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:57
+msgid "Date"
+msgstr "日付"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:29
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:179
+msgid "Description"
+msgstr "ディスクリプション"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:30
+msgid "Details"
+msgstr "詳細"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:31
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:59
+msgid "Duration"
+msgstr "期間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:32
+msgid "Edit"
+msgstr "編集 "
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:33
+#: src/Infrastructure/WP/Translations/BackendStrings.php:670
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:69
+msgid "example@mail.com"
+msgstr "example@mail.com"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:34
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:70
+msgid "Employee"
+msgstr "従業員"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:35
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:180
+msgid "Employees"
+msgstr "従業員"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:36
+msgid "Error"
+msgstr "エラー  "
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:37
+msgid "Export"
+msgstr "エクスポート"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:38
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:181
+msgid "Extras"
+msgstr "追加オプション"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:39
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:84
+msgid "Location"
+msgstr "場所"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:40
+msgid "Locations"
+msgstr "場所"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:41
+msgid "Name"
+msgstr "名前"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:42
+msgid "Name Ascending"
+msgstr "名称（昇順）"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:43
+msgid "Name Descending"
+msgstr "名称（降順）"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:44
+msgid "Need Help"
+msgstr "ヘルプが必要な場合"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:45
+msgid "No"
+msgstr "いいえ"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:46
+msgid "There are no results..."
+msgstr "結果はありません･･･"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:47
+#: src/Infrastructure/WP/Translations/BackendStrings.php:659
+msgid "Note"
+msgstr "注記"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:48
+#: src/Infrastructure/WP/Translations/BackendStrings.php:677
+msgid "Note (Internal)"
+msgstr "注（内部）"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:49
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:122
+msgid "of"
+msgstr "の"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:50
+msgid "OK"
+msgstr "OK"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:51
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:86
+msgid "On-site"
+msgstr "オンサイト"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:52
+msgid "Payment"
+msgstr "支払方法"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:53
+msgid "Period"
+msgstr "期間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:54
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:94
+msgid "Phone"
+msgstr "電話番号"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:55
+msgid "Pick a date range"
+msgstr "期間を選択する"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:56
+msgid "Save"
+msgstr "保存"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:58
+msgid "Select Time"
+msgstr "時間の選択"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:59
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:163
+msgid "Service"
+msgstr "サービス"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:60
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:98
+msgid "Services"
+msgstr "サービス"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:61
+msgid "Settings has been saved"
+msgstr "設定が保存されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:62
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:136
+msgid "Showing"
+msgstr "表示中"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:63
+msgid "Sort"
+msgstr "ソート"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:64
+#: src/Infrastructure/WP/Translations/BackendStrings.php:596
+msgid "Status"
+msgstr "ステータス"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:65
+msgid "Success"
+msgstr "成功 !"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:66
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:138
+msgid "to"
+msgstr "から"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:67
+msgid "Today"
+msgstr "今日"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:68
+msgid "Tomorrow"
+msgstr "明日"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:69
+#: src/Infrastructure/WP/Translations/BackendStrings.php:904
+msgid "Total"
+msgstr "すべて"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:70
+msgid "View"
+msgstr "表示"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:71
+msgid "Yes"
+msgstr "はい"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:83
+msgid "Add New Role"
+msgstr "新規権限の追加"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:84
+#: src/Infrastructure/WP/Translations/BackendStrings.php:446
+msgid "Address"
+msgstr "住所"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:85
+msgid "After"
+msgstr "後"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:86
+msgid "After with space"
+msgstr "スペースの後"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:87
+msgid "Amelia Role"
+msgstr "アメリアの役割"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:88
+msgid "Approved"
+msgstr "承認済"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:89
+msgid "Before"
+msgstr "前"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:90
+msgid "Before with space"
+msgstr "スペースの前"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:91
+msgid "CodeCanyon Purchase Code"
+msgstr "CodeCanyon 購入コード:"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:92
+msgid "Comma-Dot"
+msgstr "コンマ区切り"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:93
+msgid "Company"
+msgstr "会社"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:94
+msgid "Company Settings"
+msgstr "会社の設定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:96
+msgid ""
+"Use these settings to set up picture, name, address, phone and website of "
+"your company"
+msgstr ""
+"これらの設定を使用して、会社の画像、名前、住所、電話番号、ウェブサイトを設定"
+"します"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:99
+#: src/Infrastructure/WP/Translations/BackendStrings.php:710
+msgid "Coupons"
+msgstr "クーポン"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:100
+msgid "Currency"
+msgstr "国"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:101
+msgid "1 day"
+msgstr "1日間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:102
+msgid "2 days"
+msgstr "2日間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:103
+msgid "3 days"
+msgstr "3日間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:104
+msgid "4 days"
+msgstr "4日間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:105
+msgid "5 days"
+msgstr "5日間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:106
+msgid "6 days"
+msgstr "6日間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:107
+msgid "Days Off Settings"
+msgstr "休日の設定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:109
+msgid ""
+"Use these settings to set company working hours and days off which will be "
+"applied for every employee"
+msgstr ""
+"これらの設定を使用して、各従業員に適用される会社の営業時間と休暇を設定します"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:112
+msgid "Default Appointment Status"
+msgstr "既定の予定のステータス"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:114
+msgid "All appointments will be scheduled with the<br/>status you choose here."
+msgstr "すべての予定はここで選択した<br/>ステータスでスケジュールされます。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:117
+msgid "Default items per page"
+msgstr "1ページあたりのデフォルト表示されるアイテム"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:118
+msgid "Default phone country code"
+msgstr "デフォルトの電話国コード"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:119
+msgid "Default Time Slot Step"
+msgstr "デフォルト時間枠のステップ"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:121
+msgid ""
+"The Time Slot Step you define here will be applied<br/>for all time slots in "
+"the plugin."
+msgstr ""
+"ここで定義する時間枠のステップは、プラグインのすべての時間枠に適用されます。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:124
+msgid "Disabled"
+msgstr "無効化"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:125
+msgid "Dot-Comma"
+msgstr "コンマ区切り"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:126
+msgid "Enabled"
+msgstr "有効化"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:127
+msgid "General"
+msgstr "基本設定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:128
+msgid "General Settings"
+msgstr "一般設定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:130
+msgid ""
+"Use these settings to define plugin general settings and default settings "
+"for your services and \n"
+"                appointments"
+msgstr ""
+"これらの設定を使用して、プラグインの一般設定とサービスのデフォルト設定を定義"
+"し、\n"
+"                 予定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:134
+msgid "Google Calendar"
+msgstr "Google カレンダー"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:135
+msgid "Google Calendar Settings"
+msgstr "Googleカレンダー設定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:136
+msgid "Google Calendar settings description"
+msgstr "Googleカレンダー設定の説明"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:137
+msgid "Google ClientID"
+msgstr "Google ClientID"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:138
+msgid "Google Secret"
+msgstr "Google Secret"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:139
+msgid "Redirect URI"
+msgstr "リダイレクトURI"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:140
+msgid "Google Map API Key"
+msgstr "Google MAP API キー:"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:142
+msgid ""
+"Add Google Map API Key to show Google static map on<br/>\"Locations\" page."
+msgstr ""
+"Google Map APIキーを追加して、<br/>「場所」ページのGoogle静的地図を表示しま"
+"す。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:145
+msgid "1h"
+msgstr "1時間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:146
+msgid "10h"
+msgstr "10時間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:147
+msgid "11h"
+msgstr "11時間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:148
+msgid "12h"
+msgstr "12時間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:149
+msgid "1h 30min"
+msgstr "1時間30分"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:150
+msgid "2h"
+msgstr "2時間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:151
+msgid "3h"
+msgstr "3時間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:152
+msgid "4h"
+msgstr "4時間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:153
+msgid "6h"
+msgstr "6時間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:154
+msgid "8h"
+msgstr "8時間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:155
+msgid "9h"
+msgstr "9時間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:156
+msgid "Instructions"
+msgstr "特記事項"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:157
+msgid "Limit Number of Fetched Events"
+msgstr "取得するイベントの制限数"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:158
+msgid "Live Publishable Key"
+msgstr "Live 公開キー"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:159
+msgid "Live Secret Key"
+msgstr "Live 秘密キー"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:160
+msgid "Live Client ID"
+msgstr "Live クライアント ID"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:161
+msgid "Live Secret"
+msgstr "Live シークレット"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:162
+msgid "Mail Service"
+msgstr "メールサービス"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:163
+msgid "Mailgun"
+msgstr "Mailgun"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:164
+msgid "Mailgun API Key"
+msgstr "Mailgun API Key"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:165
+msgid "Mailgun Domain"
+msgstr "Mailgunドメイン"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:166
+msgid "10min"
+msgstr "10分"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:167
+msgid "12min"
+msgstr "12分"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:168
+msgid "15min"
+msgstr "15分"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:169
+msgid "20min"
+msgstr "20分"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:170
+msgid "30min"
+msgstr "30分"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:171
+msgid "45min"
+msgstr "45分"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:172
+msgid "5min"
+msgstr "5分"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:173
+msgid "Minimum time required before booking"
+msgstr "ご予約の前に最低限必要な準備時間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:175
+msgid ""
+"Set the time before the appointment when customers<br/>will not be able to "
+"book the appointment."
+msgstr ""
+"顧客が予約する前の準備時間を設定する場合、<br/>顧客はその準備時間にアポイント"
+"を予約することはできません。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:178
+msgid "Minimum time required before canceling"
+msgstr "キャンセルするまでに必要な最小時間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:180
+msgid ""
+"Set the time before the appointment when customers<br/>will not be able to "
+"cancel the appointment."
+msgstr ""
+"顧客が予約を取り消すことができない時間を設定する場合、<br/>アポイントの前に"
+"キャンセル出来る時間を設定します。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:183
+msgid "Notification"
+msgstr "通知"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:184
+msgid "Notification Settings"
+msgstr "通知設定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:186
+msgid ""
+"Use these settings to set your mail settings\n"
+"                which will be used to notify your customers and employees"
+msgstr ""
+"これらの設定を使用してメール設定を設定する\n"
+"                 お客様と従業員に通知するために使用されます"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:190
+msgid "Notify the customer(s) by default"
+msgstr "顧客にデフォルトで通知する"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:191
+#: src/Infrastructure/WP/Translations/BackendStrings.php:737
+msgid "Payments"
+msgstr "支払い"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:192
+msgid "Payments Settings"
+msgstr "支払い設定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:194
+msgid ""
+"Use these settings to set price format, payment method and coupons that will "
+"be used in all bookings"
+msgstr ""
+"これらの設定を使用して、すべての予約で使用される価格形式、支払い方法、および"
+"クーポンを設定します"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:197
+msgid "Please enter live ClientId"
+msgstr "live ClientIdを入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:198
+msgid "Please enter live Secret"
+msgstr "live Secretを入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:199
+msgid "PayPal Service"
+msgstr "PayPalサービス"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:200
+msgid "Please enter test ClientId"
+msgstr "テストClientIdを入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:201
+msgid "Please enter test Secret"
+msgstr "テストシークレットを入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:202
+msgid "Pending"
+msgstr "承認待ち"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:203
+msgid "Period available for booking in advance"
+msgstr "予約可能な期間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:204
+msgid "Set how far customers can book."
+msgstr "顧客が予約できる距離を設定します。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:205
+msgid "PHP Mail"
+msgstr "PHP Mail"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:206
+msgid "Price Number Of Decimals"
+msgstr "価格の小数点区切り"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:207
+msgid "Price Separator"
+msgstr "価格セパレータ"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:208
+msgid "Price Symbol Position"
+msgstr "価格シンボルの位置"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:209
+msgid "Purchase Code"
+msgstr "購入のコード"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:210
+msgid "Purchase Code Settings"
+msgstr "購入コード設定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:212
+msgid ""
+"Use this setting to enter the purchase code so you can have access to free "
+"updates of Amelia"
+msgstr ""
+"この設定を使用して購入コードを入力すると、アメリアの無料アップデートにアクセ"
+"スできるようになります"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:215
+msgid "Rest App Client ID"
+msgstr "Rest App Client ID"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:216
+msgid "Rest App Secret"
+msgstr "Rest App Secret"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:217
+msgid "Roles Settings"
+msgstr "ユーザー権限の設定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:218
+msgid "Roles settings description"
+msgstr "役割設定の説明"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:219
+msgid "Sandbox Mode"
+msgstr "サンドモックスモード"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:220
+msgid "Sender Email"
+msgstr "送信者メールアドレス"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:221
+msgid "Sender Name"
+msgstr "送信者名"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:222
+msgid "Settings"
+msgstr "設定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:223
+msgid "SMTP"
+msgstr "SMTP"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:224
+msgid "SMTP Host"
+msgstr "SMTPホスト"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:225
+msgid "SMTP Password"
+msgstr "SMTP パスワード"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:226
+msgid "SMTP Port"
+msgstr "SMTPポート"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:227
+msgid "SMTP Username"
+msgstr "SMTPのユーザ名"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:228
+msgid "Space-Comma"
+msgstr "スペースカンマ"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:229
+msgid "Space-Dot"
+msgstr "スペースドット"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:230
+msgid "Please enter live publishable key"
+msgstr "live 公開キーを入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:231
+msgid "Please enter live secret key"
+msgstr "live シークレットキーを入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:232
+msgid "Stripe Service"
+msgstr "Stripe サービス"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:234
+msgid ""
+"SSL (HTTPS) is not enabled. You will not be able to process live Stripe "
+"transactions until SSL is \n"
+"                enabled."
+msgstr ""
+"SSL（HTTPS）は有効になっていません。 SSLが有効になるまでライブストライプトラ"
+"ンザクションを処理することはできません\n"
+"                 有効になりました。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:238
+msgid "Please enter test publishable key"
+msgstr "テスト公開可能なキーを入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:239
+msgid "Please enter test secret key"
+msgstr "テストシークレットキーを入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:240
+msgid "Template for Event Title"
+msgstr "イベントタイトルのテンプレート"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:241
+msgid "Test Client ID"
+msgstr "テスト用クライアントID"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:242
+msgid "Test Mode"
+msgstr "テストモード"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:243
+msgid "Test Publishable Key"
+msgstr "テスト用公開キー"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:244
+msgid "Test Secret"
+msgstr "テストシークレット"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:245
+msgid "Test Secret Key"
+msgstr "テストシークレットキー"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:246
+msgid "2 Way Sync"
+msgstr "2ウェイ同期"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:247
+#: src/Infrastructure/WP/Translations/BackendStrings.php:553
+msgid "Update for all"
+msgstr "すべてを更新"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:248
+msgid "Website"
+msgstr "ウェブサイト"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:249
+msgid "1 week"
+msgstr "1週間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:250
+msgid "2 weeks"
+msgstr "2週間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:251
+msgid "3 weeks"
+msgstr "3週間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:252
+msgid "4 weeks"
+msgstr "4週間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:253
+msgid "Working Hours & Days Off"
+msgstr "営業時間 & 休業日"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:254
+msgid "WP Role"
+msgstr "WPの役割"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:255
+msgid "Please enter sender name"
+msgstr "送信者名を入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:256
+msgid "Please enter sender email"
+msgstr "送信者のメールアドレスを入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:257
+msgid "Please enter SMTP host"
+msgstr "SMTPホストに入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:258
+msgid "Please enter SMTP port"
+msgstr "SMTPポートを入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:259
+msgid "Please enter SMTP username"
+msgstr "SMTPユーザー名を入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:260
+msgid "Please enter SMTP password"
+msgstr "SMTPパスワードを入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:261
+msgid "Please enter Mailgun API key"
+msgstr "Mailgun APIキーを入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:262
+msgid "Please enter Mailgun Domain"
+msgstr "Mailgun ドメインを入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:275
+msgid "To send this notification please add the following line in your cron"
+msgstr "この通知を送信するには、cronに次の行を追加してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:278
+msgid "Email Notification"
+msgstr "メールで通知"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:279
+msgid "Email Placeholders"
+msgstr "メールプレースホルダ"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:280
+msgid "Email Template"
+msgstr "メールテンプレート"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:281
+msgid "Please enter recipient email"
+msgstr "受信者のメールアドレスを入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:282
+#: src/Infrastructure/WP/Translations/BackendStrings.php:570
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:74
+msgid "Please enter a valid email address"
+msgstr "有効なメールアドレスを入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:283
+msgid "Message"
+msgstr "メッセージ"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:284
+msgid "Notification has not been saved"
+msgstr "通知が保存されていません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:285
+msgid "Notification has been saved"
+msgstr "通知が保存されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:286
+msgid "Cancel Appointment Link"
+msgstr "予約キャンセルのリンク"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:287
+msgid "Date of the appointment"
+msgstr "予定日"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:288
+msgid "Date & Time of the appointment"
+msgstr "予定の日時"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:289
+msgid "End time of the appointment"
+msgstr "予約の終了時間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:290
+msgid "Appointment notes"
+msgstr "アポイントメントノート"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:291
+msgid "Appointment price"
+msgstr "アポイントメント価格"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:292
+msgid "Start time of the appointment"
+msgstr "予定の開始時刻"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:293
+msgid "Category name"
+msgstr "カテゴリー名"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:294
+msgid "Company address"
+msgstr "会社の住所"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:295
+msgid "Company name"
+msgstr "会社名"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:296
+msgid "Company phone"
+msgstr "会社の電話番号"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:297
+msgid "Company website"
+msgstr "会社ウェブサイト："
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:298
+msgid "Customer email"
+msgstr "お客様のメール"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:299
+msgid "Customer first name"
+msgstr "顧客の名前"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:300
+msgid "Customer full name"
+msgstr "顧客のフルネーム"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:301
+msgid "Customer last name"
+msgstr "顧客の姓"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:302
+msgid "Customer phone"
+msgstr "電話番号"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:303
+msgid "Employee email"
+msgstr "従業員の電子メール"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:304
+msgid "Employee first name"
+msgstr "従業員の名前"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:305
+msgid "Employee full name"
+msgstr "従業員の氏名"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:306
+msgid "Employee last name"
+msgstr "従業員の姓"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:307
+msgid "Employee phone"
+msgstr "従業員の電話"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:308
+msgid "Employee photo"
+msgstr "従業員の写真"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:309
+msgid "Location address"
+msgstr "場所住所"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:310
+msgid "Location name"
+msgstr "場所の名称"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:311
+msgid "Service duration"
+msgstr "サービス期間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:312
+msgid "Service name"
+msgstr "サービス名"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:313
+msgid "Service price"
+msgstr "サービス価格"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:314
+msgid "Recipient Email"
+msgstr "受信者のメール"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:315
+msgid "Requires Scheduling Setup"
+msgstr "スケジュール設定が必須"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:316
+msgid "Scheduled After Appointment"
+msgstr "予約後の予定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:317
+msgid "Scheduled For Before Appointment"
+msgstr "予約前の予定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:318
+msgid "Scheduled For"
+msgstr "予定済み"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:319
+msgid "Please select email template"
+msgstr "メールテンプレートを選択してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:320
+msgid "Send"
+msgstr "送信"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:321
+msgid "Send Test Email"
+msgstr "テストメールを送信"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:322
+msgid "</> Show Email Codes"
+msgstr "</> メールコードを表示する"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:323
+msgid "Subject"
+msgstr "件名"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:324
+msgid "Email has not been sent"
+msgstr "メールは送信されていません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:325
+msgid "Email has been sent"
+msgstr "メールが送信されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:327
+msgid ""
+"To be able to send test email please configure \"Sender Email\" in "
+"Notification Settings."
+msgstr ""
+"テスト電子メールを送信するには、通知設定で「送信者電子メール」を設定してくだ"
+"さい。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:341
+msgid "Approved Appointments"
+msgstr "承認された予定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:343
+msgid ""
+"Indicates the number of approved appointments<br/>for a chosen date range."
+msgstr "選択した期間の承認済み<br/>アポイントの数を示します。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:346
+msgid "Average Bookings"
+msgstr "平均予約"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:348
+msgid ""
+"Shows the average number of bookings per day<br/>for the selected date range."
+msgstr "選択した期間の1日あたりの<br/>平均予約数を表示します。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:351
+msgid "Interests / Conversions"
+msgstr "興味/成約"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:353
+msgid ""
+"Shows the number of views for the employee/service/location<br/>vs. the "
+"number of times they were\n"
+"                booked during<br/>the selected date range."
+msgstr ""
+"従業員/サービス/場所の表示数を表示します。選択された期間の\n"
+"                 期間中に予約された回数と比較します。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:358
+msgid ""
+"Indicates the number of new and returning customers<br/>for the selected "
+"date range."
+msgstr "選択した期間の新規顧客と<br/>リピート顧客の数を表示します。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:361
+msgid "Dashboard"
+msgstr "ダッシュボード"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:362
+msgid "New"
+msgstr "NEW"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:363
+msgid "There are no appointments for today"
+msgstr "今日の予定はありません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:364
+#: src/Infrastructure/WP/Translations/BackendStrings.php:678
+msgid "Pending Appointments"
+msgstr "保留中の予約"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:366
+msgid ""
+"Shows the number of pending appointments<br/>for the selected date range."
+msgstr "選択した期間の保留中の<br/>予定の数を表示します。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:369
+msgid "Returning"
+msgstr "戻る"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:370
+msgid "Revenue"
+msgstr "収入"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:372
+msgid ""
+"Shows the total income for paid appointments<br/>for the chosen date range."
+msgstr "選択した日付範囲の有料予定の<br/>総収入を表示します。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:375
+msgid "Scheduled Appointments"
+msgstr "予約された予定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:376
+#: src/Infrastructure/WP/Translations/BackendStrings.php:862
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:101
+msgid "Time"
+msgstr "時間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:377
+msgid "Today's appointments"
+msgstr "今日のアポイントメント"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:378
+msgid "Views"
+msgstr "表示"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:390
+msgid "Add Break"
+msgstr "休憩を追加"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:391
+#: src/Infrastructure/WP/Translations/BackendStrings.php:405
+msgid "Add Day Off"
+msgstr "休みを追加"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:392
+msgid "Enter holiday or day off name"
+msgstr "休日または休日名称を入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:393
+msgid "Apply to All Days"
+msgstr "すべての日に適用"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:394
+msgid "Breaks"
+msgstr "休憩"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:395
+msgid "Company Days off"
+msgstr "会社休業日"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:396
+msgid "Company Days Off Settings"
+msgstr "会社休業日の設定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:397
+msgid "Company Working Hours Settings"
+msgstr "会社の勤務時間の設定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:399
+msgid ""
+"You will change working hours setting which is also set for each employee "
+"separately. Do you want to \n"
+"                update it for all employees?"
+msgstr ""
+"従業員ごとに個別に設定されている勤務時間の設定も変更されます。すべての従業員"
+"の情報を更新しますか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:403
+msgid "Day Off name"
+msgstr "休日の名前"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:404
+msgid "Days Off"
+msgstr "休み"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:406
+msgid "Please enter date"
+msgstr "日付を入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:407
+#: src/Infrastructure/WP/Translations/BackendStrings.php:454
+#: src/Infrastructure/WP/Translations/BackendStrings.php:512
+msgid "Please enter name"
+msgstr "名前を入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:408
+msgid "Repeat Yearly"
+msgstr "毎年繰り返し"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:409
+msgid "Edit Company Days off"
+msgstr "会社の日を編集する"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:410
+msgid "Employee Days off"
+msgstr "従業員の休暇"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:411
+msgid "Once Off"
+msgstr "臨時休業"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:412
+msgid "Pick a date or range"
+msgstr "日付または範囲を選択する"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:413
+msgid "Pick a year"
+msgstr "年を選ぶ"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:414
+msgid "Repeat Every Year"
+msgstr "毎年繰り返し"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:415
+msgid "Work Hours"
+msgstr "勤務時間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:416
+msgid "Working Hours & Days Off Settings"
+msgstr "勤務時間 & 休日の設定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:428
+msgid "Delete"
+msgstr "削除"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:429
+msgid "Duplicate"
+msgstr "複製 "
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:430
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:95
+msgid "Please Wait"
+msgstr "お待ちください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:431
+msgid "Hide"
+msgstr "非表示"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:432
+msgid "Show"
+msgstr "表示"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:433
+msgid "Visible"
+msgstr "表示"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:445
+#: src/Infrastructure/WP/Translations/BackendStrings.php:877
+msgid "Add Location"
+msgstr "場所を追加"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:447
+msgid "Start by clicking the Add Location button"
+msgstr "まず場所の追加ボタンをクリックします"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:448
+msgid "Are you sure you want to delete this location?"
+msgstr "この場所を削除してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:449
+msgid "Are you sure you want to duplicate this location?"
+msgstr "この場所を複製してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:450
+msgid "Are you sure you want to hide this location?"
+msgstr "この場所を非表示にしてもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:451
+msgid "Are you sure you want to show this location?"
+msgstr "この場所を表示してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:452
+msgid "Edit Location"
+msgstr "場所の編集"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:453
+msgid "Please enter address"
+msgstr "住所を入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:455
+msgid "Latitude"
+msgstr "緯度"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:456
+msgid "Location Address"
+msgstr "場所住所"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:457
+msgid "Location has been deleted"
+msgstr "場所が削除されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:458
+msgid "Your Location is hidden"
+msgstr "あなたの場所は非表示にされています"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:459
+msgid "Location has been saved"
+msgstr "場所が保存されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:460
+msgid "Your Location is visible"
+msgstr "現在地が表示されています"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:461
+msgid "locations"
+msgstr "場所"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:462
+msgid "Search Locations..."
+msgstr "場所検索･･･"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:463
+msgid "Longitude"
+msgstr "経度"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:464
+msgid "Map"
+msgstr "地図"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:465
+msgid "New Location"
+msgstr "新しい場所"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:466
+msgid "You don't have any locations here yet..."
+msgstr "まだここには場所がありません..."
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:467
+msgid "This is not the right address?"
+msgstr "これは正しい住所ではありませんか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:468
+msgid "Pin Icon"
+msgstr "ピンアイコン"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:480
+msgid "Add Category"
+msgstr "商品カテゴリー追加"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:481
+#: src/Infrastructure/WP/Translations/BackendStrings.php:916
+msgid "Add Extra"
+msgstr "新規オプションを追加"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:482
+msgid "Add Image"
+msgstr "画像追加"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:483
+#: src/Infrastructure/WP/Translations/BackendStrings.php:878
+msgid "Add Service"
+msgstr "サービスの追加"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:484
+msgid "Available Images"
+msgstr "利用可能な画像"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:485
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:177
+msgid "Categories"
+msgstr "カテゴリ"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:486
+msgid "Unable to delete category"
+msgstr "サービスカテゴリを削除できません。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:487
+msgid "Categories positions has been saved"
+msgstr "カテゴリの位置が保存されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:488
+msgid "Unable to save categories positions"
+msgstr "カテゴリの位置を保存できません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:489
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:178
+msgid "Category"
+msgstr "カテゴリー"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:490
+msgid "Unable to add category"
+msgstr "カテゴリを追加できません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:491
+msgid "Category has been deleted"
+msgstr "カテゴリーは削除されました。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:492
+msgid "Category has been duplicated"
+msgstr "カテゴリが複製されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:493
+msgid "Category has been saved"
+msgstr "カテゴリが保存されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:494
+msgid "Unable to save category"
+msgstr "カテゴリを保存できません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:495
+msgid "Start by clicking the Add Category button"
+msgstr "まずカテゴリの追加ボタンをクリックします"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:496
+msgid "Start by clicking the Add Service button"
+msgstr "サービスの追加ボタンをクリックして開始します。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:497
+msgid "Are you sure you want to delete this service?"
+msgstr "このサービスを削除してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:498
+msgid "Are you sure you want to duplicate this service?"
+msgstr "このサービスを複製してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:500
+msgid ""
+"You will change a setting which is also set for each employee separately. Do "
+"you want to update it\n"
+"                 for all employees?"
+msgstr ""
+"各従業員ごとに個別に設定されている設定を変更します。 すべての従業員のために更"
+"新しますか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:504
+msgid "Are you sure you want to hide this service?"
+msgstr "このサービスを非表示にしてもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:505
+msgid "Are you sure you want to show this service?"
+msgstr "このサービスを表示してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:506
+msgid "Are you sure you want to delete this category"
+msgstr "このカテゴリを削除してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:507
+msgid "Are you sure you want to delete this extra"
+msgstr "この追加要素を削除してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:508
+msgid "Edit Service"
+msgstr "サービス編集"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:509
+msgid "Please enter extra name"
+msgstr "追加要素の名前を入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:510
+msgid "Please enter extra price"
+msgstr "追加要素の価格を入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:511
+msgid "Price must be non-negative number"
+msgstr "価格はマイナスでない数字でなければなりません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:513
+msgid "Please enter price"
+msgstr "数字で価格を入力してください。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:514
+msgid "Unable to delete extra"
+msgstr "追加要素を削除できません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:515
+msgid "Gallery"
+msgstr "ギャラリー"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:516
+msgid "Hex"
+msgstr "16進数"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:517
+msgid "Maximum Capacity"
+msgstr "最大容量"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:519
+msgid "Here you can set the maximum number of persons<br/>per one appointment."
+msgstr "1回の予約につき、予約出来る最大人数を設定することができます。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:522
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:182
+msgid "Maximum Quantity"
+msgstr ""
+"このバンドル商品の最大数。フィールドを空のままにして、無制限の最大数を入力し"
+"ます。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:523
+msgid "Minimum Capacity"
+msgstr "必要な最小容量"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:525
+msgid ""
+"Here you can set the minimum number of persons<br/>per one booking of this "
+"service."
+msgstr "ここで、このサービスの予約1回あたりの最低人数を設定できます。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:528
+msgid "New Service"
+msgstr "新規サービス"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:529
+msgid "You don't have any categories here yet..."
+msgstr "まだカテゴリはありません..."
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:530
+msgid "You don't have any services here yet..."
+msgstr "まだサービスがありません..."
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:531
+#: src/Infrastructure/WP/Translations/BackendStrings.php:625
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:96
+msgid "Price"
+msgstr "価格"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:532
+msgid "Please select category"
+msgstr "カテゴリを選択してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:533
+msgid "Please select duration"
+msgstr "期間を選択してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:534
+msgid "Buffer Time After"
+msgstr "時間間隔の後"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:536
+msgid ""
+"Time after the appointment (rest, clean up, etc.),<br/>when another booking "
+"for same service and<br/> \n"
+"                 employee \n"
+"                cannot be made."
+msgstr ""
+"予定後の時間（休憩、清掃など）、<br/>同じサービスの別の予約と<br/>\n"
+"                  従業員\n"
+"                  にすることができません。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:541
+msgid "Buffer Time Before"
+msgstr "時間間隔の前"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:543
+msgid ""
+"Time needed to prepare for the appointment, when<br/>another booking for "
+"same service and employee<br/>\n"
+"                cannot be made."
+msgstr ""
+"同じサービスと従業員のために<br/>別の予約をしたときの予約に必要な時間\n"
+"                 にすることができません。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:547
+msgid "Service has been deleted"
+msgstr "サービスが削除されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:548
+msgid "Service Details"
+msgstr "サービスの詳細"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:549
+msgid "Service is hidden"
+msgstr "サービスは隠されている"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:550
+#: src/Infrastructure/WP/Translations/BackendStrings.php:626
+msgid "Provider has appointments for this service"
+msgstr "プロバイダにはこのサービスの予定があります"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:551
+msgid "Service has been saved"
+msgstr "サービスが保存されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:552
+msgid "Service is visible"
+msgstr "サービスが表示される"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:565
+#: src/Infrastructure/WP/Translations/BackendStrings.php:815
+msgid "Create New"
+msgstr "新規作成"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:566
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:60
+msgid "Email"
+msgstr "メールアドレス："
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:567
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:71
+msgid "Please enter email"
+msgstr "メールアドレスを入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:568
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:72
+msgid "Please enter first name"
+msgstr "名前を入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:569
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:73
+msgid "Please enter last name"
+msgstr "姓を入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:571
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:76
+msgid "First Name"
+msgstr "姓"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:572
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:83
+msgid "Last Name"
+msgstr "名"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:573
+msgid "Select or Create New"
+msgstr "選択または新規作成"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:574
+msgid "WordPress User"
+msgstr "WordPress ユーザー"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:576
+msgid ""
+"Here you can map a WordPress user to the customer if<br/>you want to give "
+"customers access to the list\n"
+"                of their<br/>appointments in the back-end of the plugin."
+msgstr ""
+"ここでは、顧客がリストにアクセスできるようにしたい場合は、<br/>WordPressユー"
+"ザーを顧客に割り当てることができます\n"
+"                 これらの<br/>プラグインのバックエンドの予定。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:581
+msgid ""
+"Here you can map a WordPress user to the employee if<br/>you want to give "
+"employee access to the list\n"
+"                of their<br/>appointments in the back-end of the plugin."
+msgstr ""
+"従業員がリストにアクセスできるようにする場合は、<br/>WordPressユーザーを従業"
+"員にマップすることができます\n"
+"                 これらの<br/>プラグインのバックエンドの予定。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:597
+#: src/Infrastructure/WP/Translations/BackendStrings.php:876
+msgid "Add Employee"
+msgstr "従業員を追加"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:598
+msgid "Assigned Services"
+msgstr "割り当てられたサービス"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:599
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:50
+msgid "Capacity"
+msgstr "限界人数"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:600
+msgid "Start by clicking the Add Employee button"
+msgstr "従業員を追加ボタンをクリックして開始します"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:601
+msgid "Are you sure you want to delete this employee?"
+msgstr "この従業員を削除してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:602
+msgid "Are you sure you want to duplicate this employee?"
+msgstr "この従業員を複製してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:603
+msgid "Are you sure you want to hide this employee?"
+msgstr "この従業員を非表示にしてもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:604
+msgid "Are you sure you want to show this employee?"
+msgstr "この従業員を表示してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:605
+msgid "Edit Employee"
+msgstr "従業員を編集"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:606
+msgid "Employee has been deleted"
+msgstr "従業員が削除されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:607
+msgid "Employees have been deleted"
+msgstr "従業員が削除されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:608
+msgid "Employee is hidden"
+msgstr "従業員は非表示にされています"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:610
+msgid "Employee can not be deleted because of the future appointment"
+msgstr "将来の予定が入っているために従業員を削除することはできません。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:614
+msgid "Employees could not be deleted because of the future appointment"
+msgstr "将来の予定が入っているために従業員を削除できませんでした"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:617
+msgid "Employee has been saved"
+msgstr "従業員が保存されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:618
+msgid "Search Employees..."
+msgstr "従業員を検索･･･"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:619
+msgid "Employee is visible"
+msgstr "従業員が表示される"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:620
+msgid "employees"
+msgstr "従業員"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:621
+msgid "Please select location"
+msgstr "場所を選択してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:622
+msgid "Grid View"
+msgstr "グリッド表示"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:623
+msgid "New Employee"
+msgstr "新規従業員"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:624
+msgid "You don't have any employees here yet..."
+msgstr "あなたはまだここに従業員がいません･･･"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:627
+msgid "Table View"
+msgstr "テーブル表示"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:628
+msgid "Friday"
+msgstr "金曜日"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:629
+msgid "Monday"
+msgstr "月曜日"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:630
+msgid "Saturday"
+msgstr "土曜日"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:631
+msgid "Sunday"
+msgstr "日曜日"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:632
+msgid "Thursday"
+msgstr "木曜日"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:633
+msgid "Tuesday"
+msgstr "火曜日"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:634
+msgid "Wednesday"
+msgstr "水曜日"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:646
+#: src/Infrastructure/WP/Translations/BackendStrings.php:875
+msgid "Add Customer"
+msgstr "顧客を追加"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:647
+msgid "Start by clicking the Add Customer button"
+msgstr "顧客の追加ボタンをクリックします。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:648
+msgid "Are you sure you want to delete this customer?"
+msgstr "この顧客を削除してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:649
+msgid "Customer has been deleted"
+msgstr "顧客が削除されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:650
+msgid "Customers have been deleted"
+msgstr "顧客が削除されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:652
+msgid "Customer can not be deleted because of the future appointment"
+msgstr "今後の予定のために顧客を削除することはできません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:656
+msgid "Customers could not be deleted because of the future appointment"
+msgstr "今後の予定のために顧客を削除できませんでした"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:660
+msgid "Customer has been saved"
+msgstr "顧客が保存されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:661
+#: src/Infrastructure/WP/Translations/BackendStrings.php:824
+msgid "Customers"
+msgstr "お客様"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:662
+msgid "customers"
+msgstr "お客様"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:663
+msgid "Search Customers..."
+msgstr "お客様検索･･･"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:664
+msgid "Date of Birth"
+msgstr "生年月日"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:665
+msgid "Edit Customer"
+msgstr "顧客を編集"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:667
+msgid "You can use this option to export customers in CSV file."
+msgstr ""
+"このオプションを使用して、CSVファイルで顧客をエクスポートすることができます。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:671
+msgid "Gender"
+msgstr "性別"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:672
+msgid "Last Appointment"
+msgstr "最後の予約"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:673
+msgid "Last Appointment Ascending"
+msgstr "昇順の最新のアポイントメント"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:674
+msgid "Last Appointment Descending"
+msgstr "降順の最新のアポイントメント"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:675
+msgid "New Customer"
+msgstr "新規顧客"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:676
+msgid "You don't have any customers here yet..."
+msgstr "まだここに顧客がいません･･･"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:679
+msgid "Select Date of Birth"
+msgstr "生年月日を選択"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:680
+msgid "Total Appointments"
+msgstr "すべての予定"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:692
+msgid "Amount"
+msgstr "合計金額"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:693
+msgid "Booking Start"
+msgstr "予約開始日"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:694
+msgid "Code"
+msgstr "購入コードが正常にアクティベートされました。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:696
+msgid ""
+"Here you need to define a coupon code which customers will<br/>enter in "
+"their booking so they can get \n"
+"                a discount."
+msgstr ""
+"ここでは、顧客が予約に入力して取得できるクーポンコードを定義する必要がありま"
+"す\n"
+"                 割引。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:700
+msgid "Are you sure you want to delete this coupon?"
+msgstr "このクーポンを削除してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:701
+msgid "Are you sure you want to duplicate this coupon?"
+msgstr "このクーポンを複製してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:702
+msgid "Are you sure you want to hide this coupon?"
+msgstr "このクーポンを非表示してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:703
+msgid "Are you sure you want to show this coupon?"
+msgstr "このクーポンを表示してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:704
+msgid "Coupon has been deleted"
+msgstr "クーポンが削除されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:705
+msgid "Your Coupon is hidden"
+msgstr "あなたのクーポンが非表示にています"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:706
+msgid "Coupon has not been deleted"
+msgstr "クーポンは削除されていません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:707
+msgid "Coupon has been saved"
+msgstr "クーポンが保存されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:708
+msgid "Coupon usage limit must be at least 1"
+msgstr "クーポンの使用制限は1以上でなければなりません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:709
+msgid "Your Coupon is active"
+msgstr "あなたのクーポンは有効です"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:711
+msgid "Coupons have been deleted"
+msgstr "クーポンが削除されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:712
+msgid "coupons"
+msgstr "予約チケット"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:713
+msgid " & Other Services"
+msgstr "＆ その他のサービス"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:714
+msgid "Coupons have not been deleted"
+msgstr "クーポンは削除されていません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:715
+#: src/Infrastructure/WP/Translations/BackendStrings.php:816
+msgid "Customer Email"
+msgstr "お客様のメール"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:716
+msgid "Deduction"
+msgstr "割引率"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:717
+msgid "Edit Coupon"
+msgstr "クーポンを編集"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:718
+msgid "Employee Email"
+msgstr "従業員のメール"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:719
+msgid "Please enter code"
+msgstr "コードを入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:721
+msgid ""
+"You can use this option to export payments in CSV file<br/>for the selected "
+"date range."
+msgstr ""
+"このオプションを使用して、選択した期間のCSVファイルで支払いをエクスポートする"
+"ことができます。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:725
+msgid "You can use this option to export coupons in CSV file."
+msgstr ""
+"このオプションを使用して、クーポンをCSVファイルに書き出すことができます。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:728
+msgid "Search Coupons"
+msgstr "クーポンを検索"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:729
+msgid "Limit"
+msgstr "制限"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:730
+msgid "Method"
+msgstr "メソッド"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:731
+#: src/Infrastructure/WP/Translations/BackendStrings.php:902
+msgid "New Coupon"
+msgstr "新しいクーポン"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:732
+msgid "Coupon needs to have discount or deduction"
+msgstr "クーポンは、割引や割引率が設定されている必要があります"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:733
+msgid "You don't have any coupons here yet"
+msgstr "まだクーポンはありません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:734
+msgid "You don't have any payments here yet"
+msgstr "まだお支払いはありません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:735
+msgid "Select at least one service"
+msgstr "少なくとも1つのサービスを選択する"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:736
+msgid "Payment date"
+msgstr "支払日"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:738
+msgid "payments"
+msgstr "支払い"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:739
+msgid "Select All Service"
+msgstr "すべてのサービスを選択"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:741
+msgid "Select the services for which the coupon can be used."
+msgstr "クーポンを使用できるサービスを選択します。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:744
+msgid "Times Used"
+msgstr "使用時間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:745
+msgid "Usage Limit"
+msgstr "使用制限"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:747
+msgid ""
+"Here you need to define the number of coupons for use. After the<br/>limit "
+"is reached your coupon will \n"
+"                become unavailable."
+msgstr ""
+"ここでは、使用するクーポンの数を定義する必要があります。 <br/>制限額に達する"
+"と、クーポンは\n"
+"                 利用できなくなります。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:751
+msgid "Used"
+msgstr "使用済み"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:763
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:115
+msgid "Appointment Date"
+msgstr "予約日"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:764
+msgid "Appointment Info"
+msgstr "予約情報"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:765
+msgid "Are you sure you want to delete this payment?"
+msgstr "この支払いを削除してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:766
+msgid "Discount (%)"
+msgstr "値引き (%)"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:767
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:58
+msgid "Discount"
+msgstr "割引"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:768
+msgid "Due"
+msgstr "期日"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:769
+msgid "Enter new payment amount"
+msgstr "新しいお支払い金額を入力してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:770
+msgid "Finance"
+msgstr "会計"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:771
+msgid "Paid"
+msgstr "有料"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:772
+msgid "Payment has been deleted"
+msgstr "支払いを削除"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:773
+msgid "Payments have been deleted"
+msgstr "支払いが削除されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:774
+msgid "Payment Details"
+msgstr "支払情報の詳細"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:775
+msgid "Payment has not been deleted"
+msgstr "お支払いは削除されていません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:776
+msgid "Payments have not been deleted"
+msgstr "支払いは削除されていません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:777
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:92
+msgid "Payment Method"
+msgstr "支払方法"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:778
+msgid "Payment has been saved"
+msgstr "支払いが保存されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:779
+msgid "Service Price"
+msgstr "サービス価格"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:780
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:100
+msgid "Subtotal"
+msgstr "小計"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:792
+msgid "Appointment has been deleted"
+msgstr "予定が削除されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:793
+msgid "Appointment has not been deleted"
+msgstr "予定が削除されていません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:794
+msgid "Appointments have been deleted"
+msgstr "予定が削除されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:795
+msgid "Appointment have not been deleted"
+msgstr "予定が削除されていません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:796
+msgid "Appointment has been saved"
+msgstr "予約が保存されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:797
+msgid "Appointment status has been changed to "
+msgstr "予約のステータスがに変更されました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:798
+msgid "Appointments"
+msgstr "予約"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:800
+msgid "Search for Customers, Employees, Services..."
+msgstr "顧客、従業員、サービスを検索..."
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:803
+msgid "Assigned"
+msgstr "指定済み"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:804
+msgid "Assigned to"
+msgstr "を指定済み"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:805
+msgid "Cancel Appointment"
+msgstr "予約をキャンセルする"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:806
+msgid "Change group status"
+msgstr "グループステータスの変更"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:807
+msgid "Choose a group service"
+msgstr "グループサービスを選択する"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:808
+msgid "Start by clicking the New Appointment button"
+msgstr "新しい予定ボタンをクリックして開始します。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:809
+msgid "Are you sure you want to delete this appointment?"
+msgstr "この予定を削除してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:811
+msgid "Are you sure you want to duplicate this appointment?"
+msgstr "この予定を複製してもよろしいですか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:814
+msgid "Create Customer"
+msgstr "顧客の作成"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:817
+msgid "Customer Phone"
+msgstr "電話番号"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:818
+msgid "Customer(s)"
+msgstr "顧客"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:820
+msgid ""
+"Here you can define the number of people that are coming<br/>with this "
+"customer.\n"
+"                 The number you can choose depends<br/>on the service and "
+"employee capacity."
+msgstr ""
+"ここでは、この顧客と連れて来る人の数を定義できます。\n"
+"                  選択できる番号は、サービスと従業員の能力によって異なりま"
+"す。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:825
+msgid "Edit Appointment"
+msgstr "予定を編集"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:826
+msgid "End Time"
+msgstr "終了日"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:828
+msgid ""
+"You can use this option to export appointments in CSV file<br/>for the "
+"selected date range."
+msgstr ""
+"このオプションを使用して、選択した期間の予定をCSVファイルで<br/>エクスポート"
+"することができます。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:832
+msgid "Minimum number of persons for bookings to approve appointment is"
+msgstr "予約するための最低人数は、"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:835
+msgid "Multiple Emails"
+msgstr "複数のメール"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:836
+msgid "New Appointment"
+msgstr "新しい予約"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:837
+msgid "You don't have any appointments here yet..."
+msgstr "まだここに予定はありません･･･"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:838
+msgid "There are no selected customers"
+msgstr "選択した顧客がいません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:839
+msgid "Select customer, employee and service"
+msgstr "顧客、従業員、サービスの選択"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:840
+msgid "Notify the customer(s)"
+msgstr "顧客に通知する"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:842
+msgid ""
+"Check this checkbox if you want your customer to<br/>\n"
+"                receive an email about the scheduled appointment."
+msgstr ""
+"スケジュールされた予定についての電子メールを顧客に受け取るようにするには、"
+"<br/>\n"
+"                 このチェックボックスをオンにします。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:846
+msgid "Schedule"
+msgstr "スケジュール"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:847
+msgid "Please select at least one customer"
+msgstr "少なくとも1人の顧客を選択してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:848
+msgid "Select Customer(s)"
+msgstr "顧客を選択してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:849
+msgid "Please select date"
+msgstr "日付を選択してください。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:850
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:129
+msgid "Select Employee"
+msgstr "従業員を選択"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:851
+msgid "Please select employee"
+msgstr "スタッフを選択してください。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:852
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:131
+msgid "Select Location"
+msgstr "場所を選択"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:853
+msgid "Maximum number of places is"
+msgstr "最大人数は"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:854
+#: src/Infrastructure/WP/Translations/BackendStrings.php:942
+msgid "Select Service"
+msgstr "サービスを選択します"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:855
+msgid "Select Service Category"
+msgstr "カテゴリーを選択してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:856
+#: src/Infrastructure/WP/Translations/BackendStrings.php:923
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:161
+msgid "Please select service"
+msgstr "サービスを選択してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:857
+msgid "Please select time"
+msgstr "時間を選択してください"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:858
+msgid "Selected Customers"
+msgstr "選択した顧客をエクスポートします。"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:859
+msgid "Service Category"
+msgstr "サービスカテゴリ"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:860
+msgid "This service does not have any extras"
+msgstr "このサービスには特典がありません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:861
+msgid "Start Time"
+msgstr "開催時間"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:863
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:140
+msgid "Time slot is unavailable"
+msgstr "時間枠は使用できません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:879
+msgid "All"
+msgstr "すべて"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:880
+msgid "All employees"
+msgstr "すべての従業員"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:882
+msgid "This will change the time of the appointment. Continue?"
+msgstr "これにより、予定の時間が変更されます。 続けますか？"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:886
+msgid ""
+"Appointment can't be moved because of employee break in the selected period"
+msgstr "選択した期間内の従業員休憩のために予定を移動することはできません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:890
+msgid ""
+"There is already an appointment for this employee in selected time period"
+msgstr "選択した期間にこの従業員の予定がすでにあります"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:893
+msgid "Appointment can't be moved in past time period"
+msgstr "過去の期間に予定を移動することはできません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:895
+msgid "Appointment can't be moved out of employee working hours"
+msgstr "予定は従業員の勤務時間外に移動することはできません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:898
+msgid "Appointment has been rescheduled"
+msgstr "予約は再スケジュールされました"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:899
+msgid "Calendar"
+msgstr "カレンダー"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:900
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:51
+msgid "Confirm"
+msgstr "確認"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:901
+msgid "Group booking"
+msgstr "グループ予約"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:903
+msgid "No appointments to display"
+msgstr "表示する予定はありません"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:917
+msgid "Any Employee"
+msgstr "すべての従業員"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:918
+msgid "Bringing Anyone with You"
+msgstr "あなたと誰かを連れてくる"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:919
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:156
+msgid "Continue"
+msgstr "続行"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:920
+msgid "Customize"
+msgstr "カスタマイズ"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:921
+msgid "Font"
+msgstr "フォント"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:922
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:160
+msgid "Pick date & time"
+msgstr "日付と時刻の選択"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:924
+msgid "Primary Color"
+msgstr "プライマリカラー"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:925
+msgid "Primary Gradient"
+msgstr "主傾斜"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:926
+msgid "Reset"
+msgstr "リセット"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:927
+msgid "Text Color"
+msgstr "テキストの色"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:928
+msgid "Text Color on Background"
+msgstr "テキストの背景色"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:938
+msgid "Insert Amelia Booking Shortcode"
+msgstr "アメリア予約のショートコードを挿入"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:939
+msgid "Select View"
+msgstr "表示を選択"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:940
+msgid "Select Catalog View"
+msgstr "カタログ表示を選択"
+
+#: src/Infrastructure/WP/Translations/BackendStrings.php:941
+msgid "Select Category"
+msgstr "カテゴリの選択"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:36
+msgid "Add Coupon"
+msgstr "予約チケットを追加"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:37
+msgid "Add to Calendar"
+msgstr "カレンダーに追加"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:38
+msgid "Back"
+msgstr "戻る"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:39
+msgid "Base Price"
+msgstr "基本価格"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:40
+msgid "Thank you! Your booking is completed."
+msgstr "ありがとうございました！ 予約が完了しました。"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:42
+msgid "Thank you! Your booking is completed and now is pending confirmation."
+msgstr "ありがとうございました！ 予約が完了しており、確認まで保留中です。"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:46
+msgid "An email with details of your booking has been sent to you."
+msgstr ""
+"ご予約ありがとうございます！\v登録いただきましたメールアドレスにご予約の詳細"
+"をお送りさせて頂きました。"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:52
+msgid "Congratulations"
+msgstr "おめでとうございます！"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:53
+msgid "This coupon is not valid anymore"
+msgstr "このクーポンはもう有効ではありません"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:54
+msgid "The coupon you entered is not valid"
+msgstr "入力したクーポンは有効ではありません"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:55
+msgid "Credit or debit card"
+msgstr "クレジットカードかデビットカード"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:56
+msgid "You have already booked this appointment"
+msgstr "あなたは既にこの予定を予約しました"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:62
+msgid "Email already exists with different name. Please check your name."
+msgstr ""
+"メールは既に別の名前で存在しています。 あなたの名前を確認してください。"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:66
+msgid "Unfortunately a server error occurred and your email was not sent."
+msgstr "残念ながら、サーバーエラーが発生し、メールが送信されませんでした。"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:75
+msgid "Extras Cost"
+msgstr "追加料金"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:77
+msgid "Your card's security code is incomplete"
+msgstr "あなたのカードのセキュリティコードが一致しません"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:78
+msgid "Your card's expiration date is incomplete"
+msgstr "あなたのカードの有効期限は一致しません"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:79
+msgid "Your card number is incomplete"
+msgstr "あなたのカード番号は一致しません"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:80
+msgid "Your postal code is incomplete"
+msgstr "郵便番号は一致しません"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:81
+msgid "Your card's expiration year is in the past"
+msgstr "あなたのカードの有効期限が経過しています"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:82
+msgid "Your card number is invalid"
+msgstr "無効なカード番号です"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:85
+msgid "Number of Persons"
+msgstr "人数"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:87
+msgid "PayPal"
+msgstr "PayPal"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:89
+msgid ""
+"Sorry, there was an error processing your payment. Please try again later."
+msgstr ""
+"申し訳ありません、お支払いの処理中にエラーが発生しました。 後でもう一度お試し"
+"ください。"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:93
+msgid "persons"
+msgstr "人数"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:97
+msgid "Select Calendar"
+msgstr "カレンダー選択"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:99
+msgid "Stripe"
+msgstr "Stripe"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:102
+msgid "Total Cost"
+msgstr "合計金額"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:103
+msgid "Waiting for payment"
+msgstr "入金待ち"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:116
+msgid "Book"
+msgstr "予約"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:117
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:155
+msgid "Bringing anyone with you"
+msgstr "あなたと誰かを連れてくる"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:118
+msgid "Please enter appointment date..."
+msgstr "予定日を入力してください･･･"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:119
+msgid "From"
+msgstr "差出人"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:120
+msgid "Next"
+msgstr "次"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:121
+msgid "No results found..."
+msgstr "検索結果はありません"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:123
+msgid "Please refine your search criteria"
+msgstr "検索条件を絞り込んでください"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:124
+msgid "results"
+msgstr "結果"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:125
+msgid "Search..."
+msgstr "検索･･･"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:126
+msgid "Search Filters"
+msgstr "検索フィルターを表示"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:127
+msgid "Search Results"
+msgstr "検索結果"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:128
+msgid "Select the Appointment Time"
+msgstr "アポイントメント時間を選択する"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:130
+msgid "Select the Extras you'd like"
+msgstr "あなたが望む追加オプションを選択してください"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:132
+msgid "Service Name Ascending"
+msgstr "昇順サービス名"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:133
+msgid "Service Name Descending"
+msgstr "降順サービス名"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:134
+msgid "Service Price Ascending"
+msgstr "昇順のサービス価格"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:135
+msgid "Service Price Descending"
+msgstr "降順のサービス価格"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:137
+msgid "Time Range"
+msgstr "時間の範囲"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:139
+msgid "To"
+msgstr "まで"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:152
+msgid "Add extra"
+msgstr "オプションを追加"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:153
+msgid "Any employee"
+msgstr "すべての従業員"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:154
+msgid "Book Appointment"
+msgstr "予約する"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:157
+msgid "Extra"
+msgstr "追加オプション"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:158
+msgid "Person"
+msgstr "人物"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:159
+msgid "Persons"
+msgstr "人数"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:162
+msgid "Qty"
+msgstr "数量"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:175
+msgid "Booking Appointment"
+msgstr "予定予約"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:176
+msgid "Buffer Time"
+msgstr "時間間隔"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:183
+msgid "Service Info"
+msgstr "サービス情報"
+
+#: src/Infrastructure/WP/Translations/FrontendStrings.php:184
+msgid "View More"
+msgstr "もっと表示"
+
+#: src/Infrastructure/WP/config/Roles.php:80
+msgid "Amelia Customer"
+msgstr "アメリアの顧客"
+
+#: src/Infrastructure/WP/config/Roles.php:93
+msgid "Amelia Employee"
+msgstr "アメリアの従業員"
+
+#: src/Infrastructure/WP/config/Roles.php:106
+msgid "Amelia Manager"
+msgstr "アメリアのマネージャー"
+
+#. Plugin Name of the plugin/theme
+msgid "Amelia"
+msgstr "アメリア"
+
+#. Plugin URI of the plugin/theme
+msgid "http://wpamelia.com/"
+msgstr "http://wpamelia.com/"
+
+#. Description of the plugin/theme
+msgid ""
+"Amelia is a simple yet powerful automated booking specialist, working 24/7 "
+"to make sure your customers can make appointments even while you sleep!"
+msgstr ""
+"アメリアは、シンプルで強力な自動予約システムでスペシャリストで、ご利用中のお"
+"客様が就寝中でもサービスの顧客が予約を取れるよう24時間365日体制で対応していま"
+"す。"
+
+#. Author of the plugin/theme
+msgid "TMS"
+msgstr "TMS"
+
+#. Author URI of the plugin/theme
+msgid "https://tms-outsource.com/"
+msgstr "https://tms-outsource.com/"
